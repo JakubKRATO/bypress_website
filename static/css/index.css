@@ -731,8 +731,6 @@ img {
   z-index: -1;
 }
 
-.why__content {}
-
 .why__desc {
   font-size: 17px;
   color: #555;
@@ -1031,8 +1029,6 @@ a.contact__detail-item:hover {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
 }
-
-.footer__brand {}
 
 .footer__logo {
   height: 150px;
