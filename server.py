@@ -6,6 +6,6 @@ app.static_folder = "static"
 
 @app.route("/")
 def index():
-    return "Test"
+    return render_template("index.html")
 
-app.run(host='0.0.0.0', port=3500)
+app.run(host='0.0.0.0', port=3500, debug=True)
