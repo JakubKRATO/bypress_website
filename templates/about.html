@@ -303,33 +303,6 @@
 
   {% include 'partials/footer.html' %}
 
-  <script>
-    const navToggle = document.querySelector(".nav__toggle");
-    const mobileMenu = document.querySelector(".nav__mobile");
-    const openIcon = document.querySelector(".nav__toggle-open");
-    const closeIcon = document.querySelector(".nav__toggle-close");
-
-    if (navToggle && mobileMenu) {
-      navToggle.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("is-open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-        if (openIcon && closeIcon) {
-          openIcon.hidden = isOpen;
-          closeIcon.hidden = !isOpen;
-        }
-      });
-
-      mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("is-open");
-          navToggle.setAttribute("aria-expanded", "false");
-          if (openIcon && closeIcon) {
-            openIcon.hidden = false;
-            closeIcon.hidden = true;
-          }
-        });
-      });
-    }
-  </script>
+  <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
 </body>
 </html>

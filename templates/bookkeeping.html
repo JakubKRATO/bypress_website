@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookkeeping &amp; Office Administration - Bypress</title>
+  <meta name="description" content="Bookkeeping and office administration support from Bypress, managing daily accounting needs, supplier relationships, records, reconciliations and VAT returns.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">
+</head>
+<body>
+  {% include 'partials/navbar.html' %}
+
+  <section class="service-hero">
+    <div class="service-hero__bg">
+      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80" alt="Bookkeeping paperwork and accounting records">
+      <div class="service-hero__overlay"></div>
+    </div>
+    <div class="service-hero__deco">
+      <div class="service-hero__diamond service-hero__diamond--lg"></div>
+      <div class="service-hero__diamond service-hero__diamond--sm"></div>
+    </div>
+    <div class="service-hero__content">
+      <div class="service-hero__breadcrumb">
+        <a href="/">Home</a>
+        <span class="service-hero__breadcrumb-sep">›</span>
+        <span>Services</span>
+        <span class="service-hero__breadcrumb-sep">›</span>
+        <span>Bookkeeping</span>
+      </div>
+      <div class="service-hero__tag">
+        <span class="service-hero__tag-dot"></span>
+        Financial Support
+      </div>
+      <h1 class="service-hero__title">Bookkeeping &amp;<br><span>Office Administration</span></h1>
+      <p class="service-hero__subtitle">Managing your daily accounting needs with organised records, clear communication, and dependable financial support.</p>
+      <a href="/contact" class="service-hero__cta">
+        Get in Touch
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+    <div class="service-hero__wave">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 60H1440V20C1200 60 960 0 720 20C480 40 240 0 0 20V60Z" fill="white"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="service-intro">
+    <div class="service-intro__inner">
+      <p class="service-intro__text">At Bypress, our bookkeeping service goes beyond just managing numbers; it seamlessly integrates customer service and supplier management to provide a comprehensive financial overview for your business. We understand that accurate bookkeeping is crucial for making informed decisions, so our team is dedicated to keeping your financial records organized and up to date. But it does not stop there - we prioritize open communication with your clients and suppliers, ensuring that any inquiries or issues are addressed promptly and professionally. By managing the details of your financial transactions while fostering strong relationships with your stakeholders, we create a supportive environment that allows your business to flourish. Our commitment to exceptional service means that you can focus on what you do best, knowing your bookkeeping is in expert hands.</p>
+    </div>
+  </section>
+
+  <section class="service-features">
+    <div class="service-features__inner">
+      <div class="service-features__label">
+        <span class="service-features__label-dot"></span>
+        What We Do
+      </div>
+      <div class="service-features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="13" y2="16"></line></svg></div>
+          <div class="feature-card__title">Recording Transactions</div>
+          <p class="feature-card__text">Recording sales, purchases and bank transactions so your books stay current, consistent and easy to review.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="feature-card__title">Debtor &amp; Creditor Reconciliations</div>
+          <p class="feature-card__text">Keeping customer and supplier balances accurate with regular reconciliations and clear records.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+          <div class="feature-card__title">VAT Returns</div>
+          <p class="feature-card__text">Preparing and filing VAT returns accurately and on time, helping your business stay organised and compliant.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+          <div class="feature-card__title">Bank Reconciliations</div>
+          <p class="feature-card__text">Matching bank activity against your records to catch issues quickly and maintain a reliable financial picture.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+          <div class="feature-card__title">Business Reviews &amp; Advice</div>
+          <p class="feature-card__text">Ongoing reviews and practical advice so you can understand your numbers and make confident decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="service-cta__inner">
+      <div class="service-cta__text">
+        <h3>Ready to get your books organised?</h3>
+        <p>Let Bypress manage the daily accounting detail while you focus on running your business.</p>
+      </div>
+      <a href="/contact" class="service-cta__btn">
+        Get in Touch
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="other-services">
+    <div class="other-services__inner">
+      <div class="other-services__header">
+        <div class="other-services__tag"><span class="other-services__tag-dot"></span>Explore More</div>
+        <h2 class="other-services__title">Our Other Services</h2>
+      </div>
+      <div class="other-services__grid">
+        <a href="/services/credit-control" class="other-card"><div class="other-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div><div class="other-card__title">Credit Control</div><p class="other-card__desc">Professional debtor management that protects relationships and improves cash flow.</p><span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+        <a href="/services/lead-generation" class="other-card"><div class="other-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div><div class="other-card__title">Lead Generation &amp; Sales</div><p class="other-card__desc">Consistent outreach and lead nurturing that turns conversations into opportunities.</p><span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+        <a href="/services/office-administration" class="other-card"><div class="other-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div><div class="other-card__title">Office Administration</div><p class="other-card__desc">Remote admin support for the day-to-day work that keeps your business moving.</p><span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  {% include 'partials/footer.html' %}
+
+  <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+</body>
+</html>

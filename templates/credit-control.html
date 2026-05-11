@@ -36,7 +36,7 @@
       </div>
       <h1 class="service-hero__title">Credit Control<br><span>With a Human Touch</span></h1>
       <p class="service-hero__subtitle">Managing your finances effectively and efficiently - chasing payments while protecting the relationships that matter most to your business.</p>
-      <a href="/#contact" class="service-hero__cta">
+      <a href="/contact" class="service-hero__cta">
         Get in Touch
         <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
@@ -123,7 +123,7 @@
         <h3>Ready to improve your cash flow?</h3>
         <p>Let Bypress handle your credit control so you can focus on growing your business.</p>
       </div>
-      <a href="/#contact" class="service-cta__btn">
+      <a href="/contact" class="service-cta__btn">
         Get in Touch
         <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
@@ -141,7 +141,7 @@
         <h2 class="other-services__title">Our Other Services</h2>
       </div>
       <div class="other-services__grid">
-        <a href="bookkeeping.html" class="other-card">
+        <a href="/services/bookkeeping" class="other-card">
           <div class="other-card__icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           </div>
@@ -149,7 +149,7 @@
           <p class="other-card__desc">Accurate, timely bookkeeping and financial reporting tailored to your business.</p>
           <span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
         </a>
-        <a href="lead-generation.html" class="other-card">
+        <a href="/services/lead-generation" class="other-card">
           <div class="other-card__icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
           </div>
@@ -157,7 +157,7 @@
           <p class="other-card__desc">Cold calling and lead nurturing that builds genuine connections and converts interest into business.</p>
           <span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
         </a>
-        <a href="office-administration.html" class="other-card">
+        <a href="/services/office-administration" class="other-card">
           <div class="other-card__icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           </div>
@@ -171,25 +171,6 @@
 
   {% include 'partials/footer.html' %}
 
-  <script>
-    const navToggle = document.querySelector(".nav__toggle");
-    const mobileMenu = document.querySelector(".nav__mobile");
-    const openIcon = document.querySelector(".nav__toggle-open");
-    const closeIcon = document.querySelector(".nav__toggle-close");
-    if (navToggle && mobileMenu) {
-      navToggle.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("is-open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-        if (openIcon && closeIcon) { openIcon.hidden = isOpen; closeIcon.hidden = !isOpen; }
-      });
-      mobileMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("is-open");
-          navToggle.setAttribute("aria-expanded", "false");
-          if (openIcon && closeIcon) { openIcon.hidden = false; closeIcon.hidden = true; }
-        });
-      });
-    }
-  </script>
+  <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
 </body>
 </html>

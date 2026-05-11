@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Generation and Sales - Bypress</title>
+  <meta name="description" content="Lead generation and sales support through consistent follow-ups, tailored communication, cold calling and email outreach.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">
+</head>
+<body>
+  {% include 'partials/navbar.html' %}
+
+  <section class="service-hero">
+    <div class="service-hero__bg">
+      <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80" alt="Lead generation and sales">
+      <div class="service-hero__overlay"></div>
+    </div>
+    <div class="service-hero__deco">
+      <div class="service-hero__diamond service-hero__diamond--lg"></div>
+      <div class="service-hero__diamond service-hero__diamond--sm"></div>
+    </div>
+    <div class="service-hero__content">
+      <div class="service-hero__breadcrumb">
+        <a href="/">Home</a>
+        <span class="service-hero__breadcrumb-sep">›</span>
+        <span>Services</span>
+        <span class="service-hero__breadcrumb-sep">›</span>
+        <span>Lead Generation</span>
+      </div>
+      <div class="service-hero__tag">
+        <span class="service-hero__tag-dot"></span>
+        Sales Support
+      </div>
+      <h1 class="service-hero__title">Lead Generation<br><span>and Sales</span></h1>
+      <p class="service-hero__subtitle">Leads through consistent follow-ups and tailored communication that keeps your brand front of mind.</p>
+      <a href="/contact" class="service-hero__cta">
+        Get in Touch
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+    <div class="service-hero__wave">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 60H1440V20C1200 60 960 0 720 20C480 40 240 0 0 20V60Z" fill="white"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="service-intro">
+    <div class="service-intro__inner">
+      <p class="service-intro__text">At Bypress, our cold calling and lead nurturing service is designed to create meaningful connections through traditional methods, including phone calls and email outreach. We understand that the art of effective lead engagement lies in personalization and persistence. Our dedicated team reaches out to potential clients, not just to introduce your services, but to cultivate genuine relationships that can evolve over time. Each interaction is approached with care and strategy, ensuring that we get the best from every conversation. By nurturing leads through consistent follow-ups and tailored communications, we keep your brand top of mind while addressing potential clients' needs and concerns. This thoughtful approach enhances the likelihood of conversion, ensuring that every lead has the attention it deserves, ultimately driving your business forward.</p>
+    </div>
+  </section>
+
+  <section class="service-features">
+    <div class="service-features__inner">
+      <div class="service-features__label">
+        <span class="service-features__label-dot"></span>
+        How We Support Sales
+      </div>
+      <div class="service-features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 0 1.13 2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+          <div class="feature-card__title">Phone Outreach</div>
+          <p class="feature-card__text">We make thoughtful, professional calls that introduce your services and start meaningful conversations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+          <div class="feature-card__title">Email Outreach</div>
+          <p class="feature-card__text">We support your sales activity with clear, timely email communication that reflects your business well.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+          <div class="feature-card__title">Consistent Follow-Ups</div>
+          <p class="feature-card__text">We keep leads warm through consistent, respectful follow-ups that maintain momentum without feeling pushy.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+          <div class="feature-card__title">Tailored Communication</div>
+          <p class="feature-card__text">Every message is shaped around the prospect, their context, and the best next step for the relationship.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+          <div class="feature-card__title">Relationship Nurturing</div>
+          <p class="feature-card__text">We cultivate relationships over time so potential clients feel heard, understood and supported.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+          <div class="feature-card__title">Conversion Support</div>
+          <p class="feature-card__text">We help move qualified leads forward by keeping your pipeline organised, active and focused.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="service-cta__inner">
+      <div class="service-cta__text">
+        <h3>Ready to build better conversations?</h3>
+        <p>Let Bypress nurture your leads with consistent follow-up and human communication.</p>
+      </div>
+      <a href="/contact" class="service-cta__btn">
+        Get in Touch
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="other-services">
+    <div class="other-services__inner">
+      <div class="other-services__header">
+        <div class="other-services__tag"><span class="other-services__tag-dot"></span>Explore More</div>
+        <h2 class="other-services__title">Our Other Services</h2>
+      </div>
+      <div class="other-services__grid">
+        <a href="/services/credit-control" class="other-card"><div class="other-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div><div class="other-card__title">Credit Control</div><p class="other-card__desc">Professional debtor management that protects relationships and improves cash flow.</p><span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+        <a href="/services/bookkeeping" class="other-card"><div class="other-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div><div class="other-card__title">Bookkeeping &amp; Finance</div><p class="other-card__desc">Accurate books, reconciliations and financial records for confident decisions.</p><span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+        <a href="/services/office-administration" class="other-card"><div class="other-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div><div class="other-card__title">Office Administration</div><p class="other-card__desc">Remote admin support for the day-to-day work that keeps your business moving.</p><span class="other-card__link">Learn More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  {% include 'partials/footer.html' %}
+
+  <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+</body>
+</html>

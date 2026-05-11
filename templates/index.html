@@ -46,7 +46,7 @@
             Learn More
             <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
-          <a href="#contact" class="btn btn--outline-white">
+          <a href="/contact" class="btn btn--outline-white">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 0 1.13 2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Contact Us
           </a>
@@ -124,7 +124,7 @@
           </div>
         </a>
 
-        <a href="#" class="service-card">
+        <a href="/services/lead-generation" class="service-card">
           <div class="service-card__image">
             <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Lead Generation and Sales" loading="lazy">
             <div class="service-card__image-overlay"></div>
@@ -156,9 +156,9 @@
           </div>
         </a>
 
-        <a href="#" class="service-card">
+        <a href="/services/bookkeeping" class="service-card">
           <div class="service-card__image">
-            <img src="https://images.unsplash.com/photo-1554224154-26032fced8bd?auto=format&fit=crop&w=900&q=80" alt="Bookkeeping and Finance" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80" alt="Bookkeeping paperwork and accounting records" loading="lazy">
             <div class="service-card__image-overlay"></div>
             <div class="service-card__image-badge">
               <div class="service-card__icon">
@@ -188,7 +188,7 @@
           </div>
         </a>
 
-        <a href="#" class="service-card">
+        <a href="/services/office-administration" class="service-card">
           <div class="service-card__image">
             <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Office Administration" loading="lazy">
             <div class="service-card__image-overlay"></div>
@@ -309,7 +309,7 @@
           Explore Services
           <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-        <a href="#contact" class="btn btn--outline-white">
+        <a href="/contact" class="btn btn--outline-white">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 0 1.13 2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           Contact Us Today
         </a>
@@ -318,11 +318,10 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="contact-section">
+  <!-- <section id="contact" class="contact-section">
     <div class="section__inner">
       <div class="contact__grid">
 
-        <!-- Left: info -->
         <div class="contact__info">
           <div class="section__tag">
             <span class="section__tag-dot"></span>
@@ -367,7 +366,6 @@
           </div>
         </div>
 
-        <!-- Right: form -->
         <div class="contact__form-wrap">
           <form class="contact__form" onsubmit="handleFormSubmit(event)">
             <div class="contact__field">
@@ -412,38 +410,12 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
 
 {% include 'partials/footer.html' %}
 
+  <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
   <script>
-    const navToggle = document.querySelector(".nav__toggle");
-    const mobileMenu = document.querySelector(".nav__mobile");
-    const openIcon = document.querySelector(".nav__toggle-open");
-    const closeIcon = document.querySelector(".nav__toggle-close");
-
-    if (navToggle && mobileMenu) {
-      navToggle.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("is-open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-        if (openIcon && closeIcon) {
-          openIcon.hidden = isOpen;
-          closeIcon.hidden = !isOpen;
-        }
-      });
-
-      mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("is-open");
-          navToggle.setAttribute("aria-expanded", "false");
-          if (openIcon && closeIcon) {
-            openIcon.hidden = false;
-            closeIcon.hidden = true;
-          }
-        });
-      });
-    }
-
     function handleFormSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector(".contact__submit");
