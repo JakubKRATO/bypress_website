@@ -1,1 +1,0 @@
-TU DAVAJ HTML CSS AK MAS, kludne aj obrazky
