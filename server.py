@@ -14,4 +14,8 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 app.run(host='0.0.0.0', port=3500, debug=True)
