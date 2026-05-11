@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByPress | Remote Office Management and Administration Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo img {
+            height: 48px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2C3E67;
+        }
+
+        .btn-primary {
+            background: #2C3E67;
+            color: white;
+            padding: 0.625rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #1e2a4a;
+        }
+
+        .btn-secondary {
+            border: 2px solid #2C3E67;
+            color: #2C3E67;
+            padding: 0.625rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-nav {
+            display: none;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: #475569;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 1rem 5rem;
+            background: linear-gradient(to bottom right, #f8fafc, #dbeafe);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #1e2a4a;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #475569;
+            margin-bottom: 2rem;
+            max-width: 48rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e2a4a;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: #475569;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #5B6FA8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(to bottom right, #2C3E67, #5B6FA8);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1e2a4a;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 1rem;
+            background: linear-gradient(to bottom right, #f8fafc, #dbeafe);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e2a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            color: #475569;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .bullet {
+            width: 8px;
+            height: 8px;
+            background: #5B6FA8;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2C3E67;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #475569;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 5rem 1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: linear-gradient(to bottom right, white, #f8fafc);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2C3E67;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card p {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 1rem;
+            background: linear-gradient(to bottom right, #2C3E67, #1e2a4a);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-intro {
+            color: #bfdbfe;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content {
+            flex: 1;
+        }
+
+        .contact-item-label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item-text {
+            color: #bfdbfe;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #5B6FA8;
+            box-shadow: 0 0 0 3px rgba(91, 111, 168, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: #2C3E67;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1e2a4a;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-text {
+            color: #94a3b8;
+        }
+
+        .footer h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.125rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Icons */
+        .icon {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Replace with actual logo path -->
+                <svg width="200" height="48" viewBox="0 0 1300 280">
+                    <rect x="30" y="65" width="150" height="150" fill="#1e2a4a" transform="rotate(45 105 140)"/>
+                    <rect x="120" y="65" width="150" height="150" fill="#2C3E67" transform="rotate(45 195 140)"/>
+                    <rect x="210" y="65" width="150" height="150" fill="#5B6FA8" transform="rotate(45 285 140)"/>
+                    <rect x="300" y="65" width="150" height="150" fill="#B8C5DD" transform="rotate(45 375 140)"/>
+                    <text x="520" y="180" font-family="Arial, sans-serif" font-size="90" fill="#1e2a4a" letter-spacing="8">BYPRESS</text>
+                </svg>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">How We Help</a></li>
+                <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#benefits">How We Help</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Remote Office Management & Administration Solutions</h1>
+            <p>With over 20 years of experience, ByPress provides complete remote administration solutions for your business, allowing you to focus on what matters most.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">
+                    Get Started
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+                <a href="#services" class="btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive remote administration solutions tailored to your business needs</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Office Administration Support</h3>
+                    <p>Complete office management services including scheduling, correspondence, document management, and general administrative support to keep your business running smoothly.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Tender Assistance & Bid Management</h3>
+                    <p>Expert support in preparing, managing, and submitting tenders and bids. We handle the complex documentation and coordination so you can focus on winning contracts.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Remote Sales & Sales Support</h3>
+                    <p>Professional sales administration including CRM management, lead tracking, proposal preparation, and customer relationship support to boost your sales operations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Payroll Services</h3>
+                    <p>Accurate and timely payroll processing, ensuring compliance with Irish regulations while you focus on growing your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <h2>Why Choose ByPress?</h2>
+                    <p class="about-text">With over 20 years of experience in administrative support, ByPress provides professional remote office management solutions that help your business operate more efficiently.</p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="bullet"></div>
+                            <span>Over 20 years of industry experience</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="bullet"></div>
+                            <span>Fully remote services - work from anywhere</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="bullet"></div>
+                            <span>Flexible, scalable solutions</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="bullet"></div>
+                            <span>Irish-based team with local expertise</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="bullet"></div>
+                            <span>Confidential and secure handling</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="bullet"></div>
+                            <span>Cost-effective outsourcing alternative</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Remote Services</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Expert</div>
+                        <div class="stat-label">Administration</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Irish</div>
+                        <div class="stat-label">Based Team</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title">How We Help Your Business</h2>
+            <p class="section-subtitle">Streamline operations and reduce overhead with our remote administration solutions</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Reduce Costs</h3>
+                    <p>Save on office space, equipment, and full-time salaries while accessing professional administration services.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Increase Efficiency</h3>
+                    <p>Free up your time to focus on core business activities while we handle administrative tasks.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Scale Flexibly</h3>
+                    <p>Adjust services up or down based on your business needs without hiring or redundancy concerns.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Professional Support</h3>
+                    <p>Access experienced administrative professionals without the overhead of full-time employees.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Compliance Assured</h3>
+                    <p>Stay compliant with Irish regulations for payroll, documentation, and business administration.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Remote Accessibility</h3>
+                    <p>Work seamlessly with our team from anywhere, ensuring business continuity and flexibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <h2>Get In Touch</h2>
+                    <p class="contact-intro">Ready to streamline your business operations? Contact us today for a free consultation and discover how our remote administration services can help your business thrive.</p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg class="icon" style="stroke: #bfdbfe;" viewBox="0 0 24 24">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-label">Phone</div>
+                                <div class="contact-item-text">087 627 3239</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg class="icon" style="stroke: #bfdbfe;" viewBox="0 0 24 24">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-text">catriona@bypress.ie</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg class="icon" style="stroke: #bfdbfe;" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-text">
+                                    The Old Post Office<br>
+                                    Ballyhale, County Kilkenny<br>
+                                    Ireland
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <svg width="200" height="40" viewBox="0 0 1300 280">
+                            <rect x="30" y="65" width="150" height="150" fill="#ffffff" transform="rotate(45 105 140)"/>
+                            <rect x="120" y="65" width="150" height="150" fill="#ffffff" transform="rotate(45 195 140)"/>
+                            <rect x="210" y="65" width="150" height="150" fill="#ffffff" transform="rotate(45 285 140)"/>
+                            <rect x="300" y="65" width="150" height="150" fill="#ffffff" transform="rotate(45 375 140)"/>
+                            <text x="520" y="180" font-family="Arial, sans-serif" font-size="90" fill="#ffffff" letter-spacing="8">BYPRESS</text>
+                        </svg>
+                    </div>
+                    <p class="footer-text">Remote office management and administration solutions for your business.</p>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#services">Services</a>
+                        <a href="#about">About</a>
+                        <a href="#benefits">How We Help</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <div class="footer-text">
+                        <p>087 627 3239</p>
+                        <p>catriona@bypress.ie</p>
+                        <p style="margin-top: 1rem;">
+                            The Old Post Office<br>
+                            Ballyhale, County Kilkenny
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ByPress Administration Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileNav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
