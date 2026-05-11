@@ -459,6 +459,7 @@ img {
 }
 
 .service-card {
+  display: block;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -466,11 +467,17 @@ img {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s, transform 0.3s;
   position: relative;
+  color: inherit;
 }
 
 .service-card:hover {
   box-shadow: 0 16px 40px rgba(30,39,85,0.12);
   transform: translateY(-2px);
+}
+
+.service-card:focus-visible {
+  outline: 3px solid rgba(74,91,152,0.35);
+  outline-offset: 4px;
 }
 
 .service-card::after {

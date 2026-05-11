@@ -1,8 +1,10 @@
 from flask import Flask, render_template
+from services import service
 
 app = Flask(__name__)
 
 app.static_folder = "static"
+app.register_blueprint(service, url_prefix="/services")
 
 @app.route("/")
 def index():
