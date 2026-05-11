@@ -1012,12 +1012,36 @@ a.contact__detail-item:hover {
   gap: 12px;
 }
 
+.contact__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.contact__status {
+  min-height: 20px;
+  margin-top: -8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact__status:empty {
+  display: none;
+}
+
+.contact__status--success {
+  color: #2d6e4e;
+}
+
+.contact__status--error {
+  color: #b42318;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
 
 .footer {
-  background: #1A1A2E;
+  background: #0f0f1b;
   color: #fff;
 }
 

@@ -59,7 +59,7 @@
           </div>
 
           <div class="contact__form-wrap">
-            <form class="contact__form" onsubmit="handleFormSubmit(event)">
+            <form class="contact__form" data-endpoint="/api/dummy">
               <div class="contact__field">
                 <label class="contact__label" for="contact-name">Name</label>
                 <input type="text" id="contact-name" name="name" class="contact__input" placeholder="Your full name" required>
@@ -76,6 +76,7 @@
                 Send Message
                 <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
+              <p class="contact__status" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -86,20 +87,6 @@
   {% include 'partials/footer.html' %}
 
   <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
-  <script>
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector(".contact__submit");
-      btn.textContent = "Message Sent!";
-      btn.style.background = "#2d6e4e";
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
-        btn.style.background = "";
-        btn.disabled = false;
-        e.target.reset();
-      }, 3000);
-    }
-  </script>
+  <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 </body>
 </html>
