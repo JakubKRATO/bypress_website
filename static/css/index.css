@@ -792,11 +792,12 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
 }
 
 .why__image-wrap {
-  position: relative;
+  position: sticky;
+  top: 112px;
 }
 
 .why__image {
@@ -867,30 +868,31 @@ img {
 .why__pillars {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 .why__pillar {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 18px;
 }
 
 .why__pillar-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: #e8ebf5;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #eef2fb 0%, #e2e8f7 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
+  border: 1px solid rgba(74, 91, 152, 0.1);
 }
 
 .why__pillar-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 21px;
+  height: 21px;
   stroke: #4a5b98;
   fill: none;
   stroke-width: 2;
@@ -898,17 +900,31 @@ img {
   stroke-linejoin: round;
 }
 
+.why__pillar-copy {
+  max-width: 560px;
+}
+
 .why__pillar-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #1e2755;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .why__pillar-text {
-  font-size: 13px;
-  color: #777;
+  font-size: 14px;
+  color: #66708a;
   line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.why__pillar-text:last-child {
+  margin-bottom: 0;
+}
+
+.why__pillar-lead {
+  color: #48536f;
+  font-weight: 500;
 }
 
 /* ============================================
@@ -1310,6 +1326,11 @@ a.contact__detail-item:hover {
   .why__grid {
     grid-template-columns: 1fr;
     gap: 64px;
+  }
+
+  .why__image-wrap {
+    position: relative;
+    top: auto;
   }
 
   .why__badge {
