@@ -654,6 +654,85 @@ img {
   stroke-linejoin: round;
 }
 
+.services-fit {
+  margin-top: 56px;
+  padding: 34px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1e2755 0%, #2d3d6e 100%);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-fit::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -70px;
+  top: -70px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 24px;
+  transform: rotate(45deg);
+}
+
+.services-fit__content {
+  position: relative;
+  z-index: 1;
+}
+
+.services-fit__tag {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.services-fit__tag .section__tag-dot {
+  background: #8090c8;
+}
+
+.services-fit__title {
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.services-fit__text {
+  max-width: 680px;
+  color: rgba(255,255,255,0.78);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.services-fit__points {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.services-fit__point {
+  min-height: 74px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  display: flex;
+  align-items: center;
+}
+
+.services-fit__point span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
 .services-diff {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -698,6 +777,7 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
 
 /* ============================================
    WHY BYPRESS
@@ -1307,6 +1387,16 @@ a.contact__detail-item:hover {
   .contact__form-wrap {
     padding: 28px 20px;
   }
+
+  .services-fit {
+  grid-template-columns: 1fr;
+  padding: 26px;
+  margin-top: 40px;
+}
+
+.services-fit__points {
+  grid-template-columns: 1fr;
+}
 }
 
 @media (max-width: 480px) {
