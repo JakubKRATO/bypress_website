@@ -420,6 +420,7 @@ img {
 }
 
 .hero__wave svg {
+  transform: translateY(5px);
   display: block;
   width: 100%;
 }
