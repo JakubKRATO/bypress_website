@@ -37,7 +37,7 @@
                   <div class="contact__detail-value">info@bypress.ie</div>
                 </div>
               </a>
-              <a href="tel:087627323" class="contact__detail-item">
+              <a href="tel:0876273239" class="contact__detail-item">
                 <div class="contact__detail-icon">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 0 1.13 2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </div>
@@ -59,27 +59,25 @@
           </div>
 
           <div class="contact__form-wrap">
-            <form class="contact__form" data-endpoint="/api/dummy">
-              <div class="contact__field">
-                <label class="contact__label" for="contact-name">Name</label>
-                <input type="text" id="contact-name" name="name" class="contact__input" placeholder="Your full name" required>
-              </div>
-              <div class="contact__field">
-                <label class="contact__label" for="contact-email">Email</label>
-                <input type="email" id="contact-email" name="email" class="contact__input" placeholder="your@email.com" required>
-              </div>
-              <div class="contact__field">
-                <label class="contact__label" for="contact-message">Message</label>
-                <textarea id="contact-message" name="message" class="contact__input contact__textarea" rows="4" placeholder="Tell us about your business and how we can help..." required></textarea>
-              </div>
-              <button type="submit" class="contact__submit btn btn--primary">
-                Send Message
-                <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-              <p class="contact__status" role="status" aria-live="polite"></p>
-            </form>
+            <iframe
+    src="https://api.clarixa.ai/widget/form/Lsw6XpM0hEzm9r28h6kJ"
+    style="width:100%;height:100%;border:none;border-radius:8px"
+    id="inline-Lsw6XpM0hEzm9r28h6kJ" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Form 32"
+    data-height="489"
+    data-layout-iframe-id="inline-Lsw6XpM0hEzm9r28h6kJ"
+    data-form-id="Lsw6XpM0hEzm9r28h6kJ"
+    title="Form 32">
+</iframe>
+<script src="https://api.clarixa.ai/js/form_embed.js"></script>
           </div>
-        </div>
       </div>
     </section>
   </main>
@@ -87,6 +85,5 @@
   {% include 'partials/footer.html' %}
 
   <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 </body>
 </html>
