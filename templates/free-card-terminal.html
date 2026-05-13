@@ -51,7 +51,7 @@
           </div>
 
           <div class="hero__buttons">
-            <a href="/contact" class="btn btn--primary">
+            <a href="#terminal-form" class="btn btn--primary">
               Get A Quote
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -282,7 +282,7 @@
             <h3>Payout Fee</h3>
             <p>
               Payouts are sent to your bank account on a next-day basis, with a
-              payout fee €0.25 / day (only charged on days when you receive payouts)
+              payout fee of €0.25 per day, only charged on days when you receive payouts.
             </p>
           </div>
 
@@ -317,7 +317,7 @@
           </p>
         </div>
 
-        <a href="/contact" class="btn btn--primary">
+        <a href="#terminal-form" class="btn btn--primary">
           Ask For A Quote
         </a>
       </div>
@@ -432,69 +432,60 @@
 
     <section id="terminal-form" class="terminal-section terminal-section--white">
       <div class="section__inner">
-        <div class="terminal-contact-cta">
-          <div class="terminal-contact-cta__content">
+        <div class="terminal-form-panel">
+          <div class="terminal-form-panel__intro">
             <div class="section__tag">
               <span class="section__tag-dot"></span>
               Get Started
             </div>
 
-            <h2 class="terminal-contact-cta__title">
-              Want To Find Out If A Free Card Terminal Is Right For Your Business?
+            <h2 class="terminal-form-panel__title">
+              Check If A Free Card Terminal Is Right For Your Business
             </h2>
 
-            <p class="terminal-contact-cta__text">
-              Send your details and include as much useful information as you can.
-              This helps us understand your business and point you towards the most
-              suitable card terminal option.
+            <p class="terminal-form-panel__lead">
+              Complete the form and include the details needed to review your enquiry properly.
+              The more accurate the information is, the easier it is to suggest the best next step.
             </p>
 
-            <div class="terminal-contact-cta__points">
+            <div class="terminal-form-panel__details">
               <div>
-                <strong>Include your business type</strong>
-                <span>
-                  Tell us whether you are a market seller, taxi driver, cafe, salon,
-                  therapist, trade business, charity or another type of business.
-                </span>
+                <strong>Business details</strong>
+                <span>Business name, business type, location and contact information.</span>
               </div>
 
               <div>
-                <strong>Include expected card sales</strong>
-                <span>
-                  Add your estimated monthly card turnover and average sale value if
-                  you know them.
-                </span>
+                <strong>Payment volume</strong>
+                <span>Estimated monthly card turnover and average transaction value, if known.</span>
               </div>
 
               <div>
-                <strong>Include your setup needs</strong>
-                <span>
-                  Mention whether you need one terminal, multiple locations, payment
-                  links, phone payments or any specific integrations.
-                </span>
+                <strong>Terminal requirements</strong>
+                <span>Whether you need one terminal, multiple sites, payment links, phone payments or integrations.</span>
               </div>
             </div>
           </div>
 
-          <div class="terminal-contact-cta__card">
-            <h3>Ready to enquire?</h3>
-
-            <p>
-              Use the contact page and include your business name, contact details,
-              business type, monthly card sales estimate and how you plan to take payments.
-            </p>
-
-            <a href="/contact" class="btn btn--primary">
-              Go To Contact Page
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-
-            <p class="terminal-contact-cta__small">
-              The more information you include, the easier it is to review the best next step.
-            </p>
+          <div class="terminal-form-panel__form">
+<iframe
+    src="https://api.clarixa.ai/widget/form/o8vpAnDVoIB2xME8GO54"
+    style="width:100%;height:100%;border:none;border-radius:3px"
+    id="inline-o8vpAnDVoIB2xME8GO54" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Bypress Queries - shift4"
+    data-height="990"
+    data-layout-iframe-id="inline-o8vpAnDVoIB2xME8GO54"
+    data-form-id="o8vpAnDVoIB2xME8GO54"
+    title="Bypress Queries - shift4"
+        >
+</iframe>
+<script src="https://api.clarixa.ai/js/form_embed.js"></script>
           </div>
         </div>
       </div>
@@ -517,7 +508,7 @@
         </p>
 
         <div class="cta-banner__buttons">
-          <a href="/contact" class="btn btn--primary">
+          <a href="#terminal-form" class="btn btn--primary">
             Get A Quote
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -535,5 +526,6 @@
     {% include 'partials/footer.html' %}
 
     <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="https://api.clarixa.ai/js/form_embed.js"></script>
   </body>
 </html>
