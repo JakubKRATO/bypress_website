@@ -3,6 +3,10 @@
    Uses existing Bypress colours/components
    ============================================ */
 
+/* ============================================
+   HERO
+   ============================================ */
+
 .terminal-hero {
   position: relative;
   min-height: 92vh;
@@ -29,7 +33,12 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(105deg, rgba(30,39,85,0.96) 0%, rgba(30,39,85,0.86) 52%, rgba(45,61,110,0.58) 100%);
+    linear-gradient(
+      105deg,
+      rgba(30,39,85,0.96) 0%,
+      rgba(30,39,85,0.86) 52%,
+      rgba(45,61,110,0.58) 100%
+    );
 }
 
 .terminal-hero__inner {
@@ -40,13 +49,13 @@
   margin: 0 auto;
   padding: 90px 40px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
   gap: 64px;
   align-items: center;
 }
 
 .terminal-hero__copy {
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .terminal-hero__title {
@@ -85,88 +94,6 @@
   backdrop-filter: blur(6px);
 }
 
-.terminal-hero__card {
-  position: relative;
-  background: rgba(255,255,255,0.96);
-  border: 1px solid rgba(255,255,255,0.40);
-  border-radius: 22px;
-  padding: 34px;
-  box-shadow: 0 28px 70px rgba(0,0,0,0.24);
-  overflow: hidden;
-}
-
-.terminal-hero__card::before {
-  content: "";
-  position: absolute;
-  width: 170px;
-  height: 170px;
-  top: -80px;
-  right: -70px;
-  background: #e8ebf5;
-  border-radius: 26px;
-  transform: rotate(45deg);
-}
-
-.terminal-hero__card-label {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 14px;
-  background: #e8ebf5;
-  color: #2d3d6e;
-  border-radius: 50px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 22px;
-}
-
-.terminal-hero__card ul {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.terminal-hero__card li {
-  color: #1e2755;
-  font-size: 15px;
-  font-weight: 600;
-  padding-left: 26px;
-  position: relative;
-}
-
-.terminal-hero__card li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 9px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #4a5b98;
-  box-shadow: 0 0 0 4px #e8ebf5;
-}
-
-.terminal-hero__mini {
-  position: relative;
-  z-index: 1;
-  padding: 18px;
-  border-radius: 14px;
-  background: #f4f6fb;
-  border: 1px solid #e5e9f4;
-  color: #66708a;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.terminal-hero__mini strong {
-  display: block;
-  color: #1e2755;
-  margin-bottom: 4px;
-}
-
 .terminal-hero__deco {
   position: absolute;
   z-index: 1;
@@ -191,7 +118,164 @@
   border: 2px solid rgba(255,255,255,0.14);
 }
 
-/* Shared page sections */
+/* ============================================
+   PRODUCT SHOWCASE SECTION
+   Put this section directly after the hero
+   ============================================ */
+
+.terminal-product-section {
+  padding: 96px 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-product-section::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -150px;
+  top: 90px;
+  background: rgba(128,144,200,0.14);
+  border-radius: 34px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.terminal-product-showcase {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.terminal-product-showcase__title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.terminal-product-showcase__text {
+  color: #5f6985;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 560px;
+}
+
+.terminal-product-showcase__features {
+  display: grid;
+  gap: 14px;
+}
+
+.terminal-product-showcase__features div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  row-gap: 3px;
+  padding: 18px;
+  border: 1px solid #e7ebf5;
+  border-radius: 14px;
+  background: #f8f9fd;
+}
+
+.terminal-product-showcase__features span {
+  grid-row: span 2;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #e8ebf5;
+  color: #4a5b98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.terminal-product-showcase__features strong {
+  color: #1e2755;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.terminal-product-showcase__features p {
+  color: #66708a;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.terminal-product-showcase__media {
+  position: relative;
+  min-height: 520px;
+}
+
+.terminal-product-showcase__image {
+  overflow: hidden;
+  background: #101a2b;
+  box-shadow: 0 24px 60px rgba(30,39,85,0.18);
+}
+
+.terminal-product-showcase__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.terminal-product-showcase__image--main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88%;
+  height: 390px;
+  border-radius: 28px;
+}
+
+.terminal-product-showcase__image--small {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46%;
+  height: 270px;
+  border-radius: 24px;
+  border: 10px solid #fff;
+}
+
+.terminal-product-showcase__media::before {
+  content: "";
+  position: absolute;
+  right: 36px;
+  bottom: 42px;
+  width: 120px;
+  height: 120px;
+  background: #e8ebf5;
+  border-radius: 18px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.terminal-product-showcase__media::after {
+  content: "No monthly terminal rental options";
+  position: absolute;
+  right: 34px;
+  bottom: 0;
+  max-width: 230px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #fff;
+  color: #1e2755;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+  border: 1px solid #eef0f6;
+  box-shadow: 0 14px 34px rgba(30,39,85,0.13);
+}
+
+/* ============================================
+   SHARED PAGE SECTIONS
+   ============================================ */
 
 .terminal-section {
   padding: 96px 0;
@@ -217,7 +301,9 @@
   margin-bottom: 18px;
 }
 
-/* Benefits */
+/* ============================================
+   BENEFITS
+   ============================================ */
 
 .terminal-benefits {
   display: grid;
@@ -273,7 +359,9 @@
   line-height: 1.7;
 }
 
-/* Split section */
+/* ============================================
+   SPLIT SECTION
+   ============================================ */
 
 .terminal-split {
   display: grid;
@@ -321,7 +409,9 @@
   box-shadow: 0 0 0 5px #e8ebf5;
 }
 
-/* Steps */
+/* ============================================
+   STEPS
+   ============================================ */
 
 .terminal-steps {
   display: grid;
@@ -368,7 +458,9 @@
   line-height: 1.7;
 }
 
-/* Banner */
+/* ============================================
+   BANNER
+   ============================================ */
 
 .terminal-banner {
   background: #1e2755;
@@ -424,7 +516,9 @@
   line-height: 1.7;
 }
 
-/* FAQ */
+/* ============================================
+   FAQ
+   ============================================ */
 
 .terminal-faq {
   max-width: 860px;
@@ -475,7 +569,9 @@
   line-height: 1.7;
 }
 
-/* Form area */
+/* ============================================
+   FORM AREA
+   ============================================ */
 
 .terminal-form-grid {
   display: grid;
@@ -518,23 +614,33 @@
   margin-top: -8px;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 
 @media (max-width: 1100px) {
+  .terminal-product-showcase {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .terminal-product-showcase__media {
+    min-height: 500px;
+  }
+
+  .terminal-product-showcase__content {
+    max-width: 720px;
+  }
+
   .terminal-benefits,
   .terminal-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .terminal-hero__inner,
   .terminal-split,
   .terminal-form-grid {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-
-  .terminal-hero__card {
-    max-width: 620px;
   }
 }
 
@@ -554,8 +660,48 @@
     grid-template-columns: 1fr;
   }
 
-  .terminal-section {
+  .terminal-section,
+  .terminal-product-section {
     padding: 72px 0;
+  }
+
+  .terminal-product-showcase__media {
+    min-height: auto;
+    display: grid;
+    gap: 18px;
+  }
+
+  .terminal-product-showcase__image--main,
+  .terminal-product-showcase__image--small {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    border-radius: 20px;
+  }
+
+  .terminal-product-showcase__image--small {
+    border: none;
+  }
+
+  .terminal-product-showcase__image img {
+    height: auto;
+  }
+
+  .terminal-product-showcase__media::before,
+  .terminal-product-showcase__media::after {
+    display: none;
+  }
+
+  .terminal-product-showcase__features div {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-product-showcase__features span {
+    grid-row: auto;
   }
 
   .terminal-benefits,
@@ -567,8 +713,7 @@
     grid-template-columns: 1fr;
   }
 
-  .terminal-checklist,
-  .terminal-hero__card {
+  .terminal-checklist {
     padding: 26px;
   }
 }
@@ -588,5 +733,134 @@
 
   .terminal-faq p {
     padding: 16px 20px 20px;
+  }
+}
+
+/* ============================================
+   CONTACT CTA
+   replaces the embedded contact form
+   ============================================ */
+
+.terminal-contact-cta {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 70px;
+  align-items: center;
+  padding: 48px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f4f6fb 0%, #ffffff 100%);
+  border: 1px solid #e5e9f4;
+  box-shadow: 0 14px 40px rgba(30,39,85,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-contact-cta::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -90px;
+  top: -90px;
+  background: rgba(128,144,200,0.16);
+  border-radius: 28px;
+  transform: rotate(45deg);
+}
+
+.terminal-contact-cta__content,
+.terminal-contact-cta__card {
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-contact-cta__title {
+  font-size: clamp(30px, 4vw, 46px);
+  color: #1e2755;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.terminal-contact-cta__text {
+  color: #5f6985;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.terminal-contact-cta__points {
+  display: grid;
+  gap: 14px;
+}
+
+.terminal-contact-cta__points div {
+  padding: 18px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e7ebf5;
+}
+
+.terminal-contact-cta__points strong {
+  display: block;
+  color: #1e2755;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.terminal-contact-cta__points span {
+  color: #66708a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.terminal-contact-cta__card {
+  background: #1e2755;
+  color: #fff;
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 22px 55px rgba(30,39,85,0.22);
+}
+
+.terminal-contact-cta__card h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.terminal-contact-cta__card p {
+  color: rgba(255,255,255,0.74);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.terminal-contact-cta__card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.terminal-contact-cta__small {
+  margin-top: 18px;
+  margin-bottom: 0 !important;
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.55) !important;
+}
+
+@media (max-width: 900px) {
+  .terminal-contact-cta {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-contact-cta {
+    padding: 24px;
+  }
+
+  .terminal-contact-cta__card {
+    padding: 28px;
   }
 }

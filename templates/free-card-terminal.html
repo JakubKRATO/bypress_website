@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Free Card Terminal | Bypress</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
@@ -36,18 +37,21 @@
           </h1>
 
           <p class="terminal-hero__text">
-            Accept card payments with a simple, reliable terminal solution designed for small businesses, seasonal traders, salons, food trucks, trades, charities and service providers.
+            A simple card payment solution for seasonal businesses, market sellers,
+            taxi drivers, food trucks, salons, therapists, trades, charities and
+            other businesses that want to accept card payments without monthly
+            terminal rental costs.
           </p>
 
           <div class="terminal-hero__points">
-            <div>€0 monthly terminal rental options</div>
-            <div>Fast setup and simple onboarding</div>
-            <div>Clear pricing with no confusing surprises</div>
-            <div>Support from real people when you need help</div>
+            <div>€0/month terminal rental</div>
+            <div>No hidden monthly machine fees</div>
+            <div>Next-day payouts</div>
+            <div>SIM card included at no extra cost</div>
           </div>
 
           <div class="hero__buttons">
-            <a href="#terminal-form" class="btn btn--primary">
+            <a href="/contact" class="btn btn--primary">
               Get A Quote
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -55,27 +59,69 @@
               </svg>
             </a>
 
-            <a href="#terminal-info" class="btn btn--outline-white">
-              Learn More
+            <a href="#terminal-product" class="btn btn--outline-white">
+              View Terminal
             </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="terminal-hero__card">
-          <div class="terminal-hero__card-label">Popular For</div>
+    <section id="terminal-product" class="terminal-product-section">
+      <div class="section__inner">
+        <div class="terminal-product-showcase">
+          <div class="terminal-product-showcase__content">
+            <div class="section__tag">
+              <span class="section__tag-dot"></span>
+              The Terminal
+            </div>
 
-          <ul>
-            <li>Market sellers</li>
-            <li>Food trucks</li>
-            <li>Taxi drivers</li>
-            <li>Barbers and salons</li>
-            <li>Therapists</li>
-            <li>Trades and mobile services</li>
-          </ul>
+            <h2 class="section__title terminal-product-showcase__title">
+              A modern card terminal for everyday business payments.
+            </h2>
 
-          <div class="terminal-hero__mini">
-            <strong>Simple idea:</strong>
-            get paid by card without paying unnecessary monthly rental fees.
+            <p class="terminal-product-showcase__text">
+              Take payments at the counter, at tables, at events, on the road or
+              wherever your business operates. The terminal is designed to be simple
+              to use, practical for staff, and suitable for businesses that need a
+              reliable way to accept card payments.
+            </p>
+
+            <div class="terminal-product-showcase__features">
+              <div>
+                <span>01</span>
+                <strong>Portable setup</strong>
+                <p>Useful for fixed locations and mobile businesses.</p>
+              </div>
+
+              <div>
+                <span>02</span>
+                <strong>Receipt options</strong>
+                <p>Supports print and email receipt workflows.</p>
+              </div>
+
+              <div>
+                <span>03</span>
+                <strong>Built-in connectivity</strong>
+                <p>Includes a SIM card, so you do not need to connect your phone for internet.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="terminal-product-showcase__media">
+            <div class="terminal-product-showcase__image terminal-product-showcase__image--main">
+              <img
+                src="{{ url_for('static', filename='img/terminal-main.webp') }}"
+                alt="Card terminal on blue background"
+              />
+            </div>
+
+            <div class="terminal-product-showcase__image terminal-product-showcase__image--small">
+              <img
+                src="{{ url_for('static', filename='img/terminal-alt.webp') }}"
+                alt="Portable card payment terminal"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -86,13 +132,16 @@
         <div class="section__header">
           <div class="section__tag">
             <span class="section__tag-dot"></span>
-            Why Choose This
+            What Is Included
           </div>
 
-          <h2 class="section__title">A Practical Payment Solution Without The Usual Hassle</h2>
+          <h2 class="section__title">
+            Card Payments Without Heavy Monthly Rental Costs
+          </h2>
 
           <p class="section__subtitle">
-            We help you understand the available card terminal options, compare costs clearly, and choose a setup that fits how your business actually works.
+            This offer is designed for businesses that want a practical card machine
+            with clear costs, competitive rates, useful reporting and simple setup.
           </p>
         </div>
 
@@ -105,9 +154,10 @@
                 <line x1="7" y1="14" x2="11" y2="14"></line>
               </svg>
             </div>
-            <h3>No Monthly Rental Option</h3>
+            <h3>€0 Monthly Rental</h3>
             <p>
-              Suitable providers may offer terminal options with no monthly device rental, helping reduce fixed costs.
+              The offer includes a card machine plan with €0/month terminal rental
+              and no hidden monthly machine fees.
             </p>
           </div>
 
@@ -117,9 +167,26 @@
                 <path d="M13 2 3 14h8l-1 8 11-13h-8l1-7z"></path>
               </svg>
             </div>
-            <h3>Fast And Easy Setup</h3>
+            <h3>Next-Day Payouts</h3>
             <p>
-              We keep the process simple and explain what details are needed so you can start accepting card payments quickly.
+              Payouts are sent directly to your bank account on a next-day basis,
+              with a small payout fee only on days you receive payouts.
+            </p>
+          </div>
+
+          <div class="terminal-benefit">
+            <div class="terminal-benefit__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 8.5a15 15 0 0 1 20 0"></path>
+                <path d="M5 12a10.5 10.5 0 0 1 14 0"></path>
+                <path d="M8.5 15.5a5.5 5.5 0 0 1 7 0"></path>
+                <path d="M12 19h.01"></path>
+              </svg>
+            </div>
+            <h3>SIM Card Included</h3>
+            <p>
+              The terminal includes a SIM card at no extra cost, so you do not need
+              to connect your phone for internet.
             </p>
           </div>
 
@@ -131,21 +198,10 @@
                 <path d="M6 20v-6"></path>
               </svg>
             </div>
-            <h3>Useful Reports</h3>
+            <h3>Reports And Receipts</h3>
             <p>
-              Access clearer payment and transaction reporting so you can keep better visibility over your sales.
-            </p>
-          </div>
-
-          <div class="terminal-benefit">
-            <div class="terminal-benefit__icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
-              </svg>
-            </div>
-            <h3>Human Support</h3>
-            <p>
-              Instead of being left to figure everything out alone, you get guidance before, during and after setup.
+              The terminal supports useful reporting, plus print and email receipt
+              options for day-to-day business use.
             </p>
           </div>
         </div>
@@ -162,28 +218,32 @@
             </div>
 
             <h2 class="section__title terminal-left-title">
-              Ideal For Businesses That Want Card Payments Without Heavy Fixed Costs
+              A strong fit for seasonal, mobile and lower-card-turnover businesses.
             </h2>
 
             <p class="terminal-text">
-              A free card terminal option can be a strong fit for smaller businesses, mobile businesses, seasonal businesses, or any business that wants to accept card payments without committing to expensive monthly device rental.
+              This type of free card terminal offer can be especially useful for
+              businesses that do not want to pay a monthly rental fee for a card
+              machine, or businesses where card turnover changes throughout the year.
             </p>
 
             <p class="terminal-text">
-              It may not be the perfect choice for every business. The right plan depends on your monthly card turnover, average transaction value, customer type, and whether you need integrations or multiple terminals.
+              It is not necessarily the right option for everyone. The best plan
+              depends on your business type, monthly card sales, customer type,
+              transaction volume and whether you need integrations or multiple devices.
             </p>
           </div>
 
           <div class="terminal-checklist">
-            <h3>This may suit you if you are:</h3>
+            <h3>This may suit businesses such as:</h3>
 
             <ul>
-              <li>A market seller or event trader</li>
-              <li>A barber, salon, therapist or beauty business</li>
-              <li>A taxi driver or mobile service provider</li>
-              <li>A food truck, cafe or small retail business</li>
-              <li>A trade business taking payments on the go</li>
-              <li>A charity or community organisation</li>
+              <li>Market sellers and event traders</li>
+              <li>Taxi drivers and mobile service providers</li>
+              <li>Food trucks and cafes with lower-value sales</li>
+              <li>Charities and community organisations</li>
+              <li>Barbers, salons, therapists and beauty businesses</li>
+              <li>Bike repair shops, trades and similar businesses</li>
             </ul>
           </div>
         </div>
@@ -195,42 +255,50 @@
         <div class="section__header">
           <div class="section__tag">
             <span class="section__tag-dot"></span>
-            How It Works
+            Costs And Terms
           </div>
 
-          <h2 class="section__title">Simple From First Question To First Payment</h2>
+          <h2 class="section__title">
+            Clear Information Before You Commit
+          </h2>
+
+          <p class="section__subtitle">
+            Rates can depend on card turnover, customer type, business type and
+            whether you need additional services. The aim is to make the costs clear
+            before you apply.
+          </p>
         </div>
 
-        <div class="terminal-steps">
-          <div class="terminal-step">
-            <div class="terminal-step__number">01</div>
-            <h3>Tell Us About Your Business</h3>
+        <div class="terminal-benefits">
+          <div class="terminal-benefit">
+            <h3>Standard Card Rates</h3>
             <p>
-              Send your business details, expected card sales, and how you plan to take payments.
+              For many small B2C businesses, the standard rate may be 1.25% on Visa
+              and Mastercard. Higher card sales may qualify for bespoke plans.
             </p>
           </div>
 
-          <div class="terminal-step">
-            <div class="terminal-step__number">02</div>
-            <h3>We Review Your Options</h3>
+          <div class="terminal-benefit">
+            <h3>Payout Fee</h3>
             <p>
-              We explain suitable plans, fees, payout details and anything you should know before applying.
+              Payouts are sent to your bank account on a next-day basis, with a
+              payout fee €0.25 / day (only charged on days when you receive payouts)
             </p>
           </div>
 
-          <div class="terminal-step">
-            <div class="terminal-step__number">03</div>
-            <h3>Application And Agreement</h3>
+          <div class="terminal-benefit">
+            <h3>Other Payment Types</h3>
             <p>
-              Complete the required application details and sign the relevant agreement electronically.
+              AMEX cards may be charged at 1.9%. Payments taken over the phone or
+              through payment links may be charged at 1.99%.
             </p>
           </div>
 
-          <div class="terminal-step">
-            <div class="terminal-step__number">04</div>
-            <h3>Receive Your Terminal</h3>
+          <div class="terminal-benefit">
+            <h3>No Use, No Fees</h3>
             <p>
-              Once approved, your terminal is sent out and you can begin accepting card payments.
+              If you do not use the card machine, there are no fees. If the machine
+              breaks, a replacement device can be sent.
             </p>
           </div>
         </div>
@@ -241,15 +309,66 @@
       <div class="terminal-banner__inner">
         <div>
           <div class="terminal-banner__eyebrow">Transparent Pricing</div>
-          <h2>Understand The Fees Before You Commit</h2>
+          <h2>Find the right plan for your business.</h2>
           <p>
-            We help explain transaction rates, payout fees, optional extras, and provider terms clearly so you know what you are signing up for.
+            Different businesses need different payment setups. Your rate and plan
+            can depend on your business type, monthly card turnover, average sale
+            value, customer mix and any integrations needed.
           </p>
         </div>
 
-        <a href="#terminal-form" class="btn btn--primary">
-          Ask For A Clear Quote
+        <a href="/contact" class="btn btn--primary">
+          Ask For A Quote
         </a>
+      </div>
+    </section>
+
+    <section class="terminal-section terminal-section--white">
+      <div class="section__inner">
+        <div class="section__header">
+          <div class="section__tag">
+            <span class="section__tag-dot"></span>
+            How It Works
+          </div>
+
+          <h2 class="section__title">
+            Simple From Application To First Payment
+          </h2>
+        </div>
+
+        <div class="terminal-steps">
+          <div class="terminal-step">
+            <div class="terminal-step__number">01</div>
+            <h3>Apply Online</h3>
+            <p>
+              Submit a quick application with your basic business details.
+            </p>
+          </div>
+
+          <div class="terminal-step">
+            <div class="terminal-step__number">02</div>
+            <h3>Provide Documents</h3>
+            <p>
+              You may need ID, proof of address, proof of business and bank details.
+            </p>
+          </div>
+
+          <div class="terminal-step">
+            <div class="terminal-step__number">03</div>
+            <h3>Sign Electronically</h3>
+            <p>
+              You receive an agreement to sign electronically from the acquiring bank.
+            </p>
+          </div>
+
+          <div class="terminal-step">
+            <div class="terminal-step__number">04</div>
+            <h3>Receive Your Machine</h3>
+            <p>
+              The card machine is usually received within about a week of application.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -261,42 +380,50 @@
             Questions
           </div>
 
-          <h2 class="section__title">Common Questions</h2>
+          <h2 class="section__title">
+            Common Questions
+          </h2>
         </div>
 
         <div class="terminal-faq">
           <details>
-            <summary>Is the card terminal really free?</summary>
+            <summary>Can I really get a free card machine?</summary>
             <p>
-              Some provider plans may offer a terminal with no monthly rental. Transaction fees and other usage-related costs may still apply. We will explain the full cost before you apply.
+              Yes. The offer is for a card machine plan with €0/month terminal rental.
+              Transaction rates and other usage-related costs may still apply.
             </p>
           </details>
 
           <details>
-            <summary>Can I use it without Wi-Fi?</summary>
+            <summary>Who is this offer best suited for?</summary>
             <p>
-              Some terminals include mobile connectivity, which can make them suitable for mobile businesses, markets, events and locations without reliable Wi-Fi.
+              It can be a strong fit for seasonal businesses, lower-card-turnover
+              businesses, market sellers, taxi drivers, food trucks, cafes, charities,
+              barbers, salons, therapists, trades and similar businesses.
             </p>
           </details>
 
           <details>
-            <summary>How quickly can I receive the terminal?</summary>
+            <summary>How many free card machines can I get?</summary>
             <p>
-              Timelines depend on the provider, approval process and delivery. Once we know your business details, we can give you a clearer estimate.
+              The offer is usually limited to one free card machine per site. If you
+              have multiple business locations, you may be able to apply for one per
+              location. If you need multiple terminals at the same site, ask for a quote.
             </p>
           </details>
 
           <details>
-            <summary>Can I get more than one terminal?</summary>
+            <summary>Can I cancel?</summary>
             <p>
-              This depends on your business locations, turnover and provider terms. If you need multiple devices, tell us in the form and we can review suitable options.
+              The card machine agreement is €0/month. If you no longer want it, you
+              can send the card machine back.
             </p>
           </details>
 
           <details>
-            <summary>Can I cancel if I no longer need it?</summary>
+            <summary>What happens if the card machine breaks?</summary>
             <p>
-              Cancellation terms depend on the provider agreement. We will explain the relevant conditions before you proceed.
+              A replacement device can be sent to you.
             </p>
           </details>
         </div>
@@ -305,74 +432,69 @@
 
     <section id="terminal-form" class="terminal-section terminal-section--white">
       <div class="section__inner">
-        <div class="terminal-form-grid">
-          <div>
+        <div class="terminal-contact-cta">
+          <div class="terminal-contact-cta__content">
             <div class="section__tag">
               <span class="section__tag-dot"></span>
               Get Started
             </div>
 
-            <h2 class="section__title terminal-left-title">
-              Want To Find Out If Your Business Qualifies?
+            <h2 class="terminal-contact-cta__title">
+              Want To Find Out If A Free Card Terminal Is Right For Your Business?
             </h2>
 
-            <p class="terminal-text">
-              Send a few details and we will come back to you with the most suitable card terminal options for your business.
+            <p class="terminal-contact-cta__text">
+              Send your details and include as much useful information as you can.
+              This helps us understand your business and point you towards the most
+              suitable card terminal option.
             </p>
 
-            <div class="terminal-contact-card">
-              <h3>Prefer to talk first?</h3>
-              <p>
-                Contact Bypress and we can guide you through the available options.
-              </p>
-              <a href="/contact">Go to contact page</a>
+            <div class="terminal-contact-cta__points">
+              <div>
+                <strong>Include your business type</strong>
+                <span>
+                  Tell us whether you are a market seller, taxi driver, cafe, salon,
+                  therapist, trade business, charity or another type of business.
+                </span>
+              </div>
+
+              <div>
+                <strong>Include expected card sales</strong>
+                <span>
+                  Add your estimated monthly card turnover and average sale value if
+                  you know them.
+                </span>
+              </div>
+
+              <div>
+                <strong>Include your setup needs</strong>
+                <span>
+                  Mention whether you need one terminal, multiple locations, payment
+                  links, phone payments or any specific integrations.
+                </span>
+              </div>
             </div>
           </div>
 
-          <div class="contact__form-wrap">
-            <form class="contact__form" action="/contact" method="POST">
-              <div class="contact__field">
-                <label class="contact__label" for="name">Name</label>
-                <input class="contact__input" type="text" id="name" name="name" placeholder="Your name" required />
-              </div>
+          <div class="terminal-contact-cta__card">
+            <h3>Ready to enquire?</h3>
 
-              <div class="contact__field">
-                <label class="contact__label" for="business">Business name</label>
-                <input class="contact__input" type="text" id="business" name="business" placeholder="Business name" />
-              </div>
+            <p>
+              Use the contact page and include your business name, contact details,
+              business type, monthly card sales estimate and how you plan to take payments.
+            </p>
 
-              <div class="contact__field">
-                <label class="contact__label" for="email">Email</label>
-                <input class="contact__input" type="email" id="email" name="email" placeholder="you@example.com" required />
-              </div>
+            <a href="/contact" class="btn btn--primary">
+              Go To Contact Page
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
 
-              <div class="contact__field">
-                <label class="contact__label" for="phone">Phone number</label>
-                <input class="contact__input" type="tel" id="phone" name="phone" placeholder="Phone number" />
-              </div>
-
-              <div class="contact__field">
-                <label class="contact__label" for="message">Tell us about your business</label>
-                <textarea
-                  class="contact__input contact__textarea"
-                  id="message"
-                  name="message"
-                  placeholder="Business type, monthly card sales, number of terminals needed, and any questions..."
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn--primary contact__submit">
-                Send Enquiry
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </button>
-
-              <p class="terminal-form-note">
-                By submitting this form, you agree to be contacted about your enquiry.
-              </p>
-            </form>
+            <p class="terminal-contact-cta__small">
+              The more information you include, the easier it is to review the best next step.
+            </p>
           </div>
         </div>
       </div>
@@ -381,17 +503,31 @@
     <section class="cta-banner">
       <div class="cta-banner__deco cta-banner__deco--tr"></div>
       <div class="cta-banner__deco cta-banner__deco--bl"></div>
+      <div class="cta-banner__deco cta-banner__deco--mid"></div>
+
       <div class="cta-banner__inner">
         <h2 class="cta-banner__title">
           Make Taking Payments
           <span class="cta-banner__title-accent">Simpler</span>
         </h2>
+
         <p class="cta-banner__sub">
-          Get clear guidance, straightforward support and a payment setup that suits your business.
+          Get clear guidance, straightforward support and a payment setup that suits
+          your business.
         </p>
+
         <div class="cta-banner__buttons">
-          <a href="#terminal-form" class="btn btn--primary">Get A Quote</a>
-          <a href="/contact" class="btn btn--outline-white">Contact Us</a>
+          <a href="/contact" class="btn btn--primary">
+            Get A Quote
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <a href="#terminal-info" class="btn btn--outline-white">
+            Learn More
+          </a>
         </div>
       </div>
     </section>
