@@ -18,17 +18,14 @@ def about():
 def contact():
     return render_template("contact.html")
 
-<<<<<<< Updated upstream
 @app.route("/services/grants")
 def grants():
     return render_template("grants.html")
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3500, debug=True)
-=======
 @app.route("/free-card-terminal")
 def terminal():
     return render_template("free-card-terminal.html")
 
-app.run(host='0.0.0.0', port=3500, debug=True)
->>>>>>> Stashed changes
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=3500, debug=True)
+    
