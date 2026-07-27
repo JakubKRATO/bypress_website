@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IE">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bypress | Outsourced Office Administration &amp; Business Support Ireland</title>
-    <meta name="description" content="Bypress provides outsourced office administration, financial operations support, lead generation and sales support for growing businesses across Ireland." />
-    <meta name="keywords" content="outsourced office administration Ireland, business support Ireland, financial operations support, credit control, lead generation, sales support, office administration, Bypress" />
+    <title>Bypress | Practical Business Training &amp; Consultancy Ireland</title>
+    <meta
+      name="description"
+      content="Practical sales, communications and operations training from the people who do the work. Bypress also provides flexible, fractional consultancy across Ireland."
+    />
+    <meta
+      name="keywords"
+      content="business training Ireland, sales training Ireland, communications training, business consultancy Ireland, lead generation training, Bypress"
+    />
     <meta name="author" content="Bypress" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#1e2755" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href="https://www.bypress.ie/" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" />
+
     <meta property="og:locale" content="en_IE" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Bypress" />
-    <meta property="og:title" content="Bypress | Outsourced Office Administration &amp; Business Support Ireland" />
-    <meta property="og:description" content="People-first operational, sales and finance support for growing Irish businesses. Reduce admin pressure and keep your business moving." />
+    <meta property="og:title" content="Bypress | Practical Business Training &amp; Consultancy" />
+    <meta
+      property="og:description"
+      content="We do the job. Then we train your team to do it too. Practical training and flexible consultancy from working practitioners."
+    />
     <meta property="og:url" content="https://www.bypress.ie/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" />
-    <meta property="og:image:alt" content="Professional team collaborating on business support" />
+    <meta property="og:image" content="https://www.bypress.ie/static/img/logo.png" />
+    <meta property="og:image:alt" content="Bypress" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bypress | Outsourced Office Administration &amp; Business Support Ireland" />
-    <meta name="twitter:description" content="Outsourced office administration, financial operations support, lead generation and sales support for growing businesses across Ireland." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <meta name="twitter:title" content="Bypress | Practical Business Training &amp; Consultancy" />
+    <meta
+      name="twitter:description"
+      content="Practical training and flexible consultancy from working sales, communications and operations practitioners."
+    />
+    <meta name="twitter:image" content="https://www.bypress.ie/static/img/logo.png" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -33,8 +46,7 @@
         "name": "Bypress",
         "url": "https://www.bypress.ie/",
         "logo": "https://www.bypress.ie/static/img/logo.png",
-        "image": "https://www.bypress.ie/static/img/logo.png",
-        "description": "Bypress provides outsourced office administration, financial operations support, lead generation and sales support for growing businesses across Ireland.",
+        "description": "Practical business training and flexible consultancy delivered by working sales, communications and operations practitioners.",
         "telephone": "+353876273239",
         "email": "info@bypress.ie",
         "areaServed": {
@@ -50,437 +62,1368 @@
           "https://www.instagram.com/bypress_solutions"
         ],
         "serviceType": [
-          "Outsourced office administration",
-          "Financial operations support",
-          "Lead generation and sales support",
-          "Credit control",
-          "Business support"
+          "Business training",
+          "Sales training",
+          "Communications training",
+          "Business consultancy",
+          "Fractional sales support",
+          "Lead generation"
         ]
       }
     </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://www.bypress.ie/#website",
-        "url": "https://www.bypress.ie/",
-        "name": "Bypress",
-        "publisher": {
-          "@id": "https://www.bypress.ie/#organization"
-        },
-        "inLanguage": "en-IE"
+
+    <style>
+      :root {
+        --navy: #1e2755;
+        --navy-2: #2d3d6e;
+        --navy-3: #4a5b98;
+        --accent: #8090c8;
+        --accent-soft: #e8ebf5;
+        --ink: #252b43;
+        --muted: #606980;
+        --line: #e3e7f1;
+        --paper: #f4f6fb;
+        --white: #ffffff;
+        --radius: 16px;
+        --max-width: 1200px;
       }
-    </script>
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 96px;
+      }
+
+      body {
+        min-width: 320px;
+        color: var(--ink);
+        background: var(--white);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--navy);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 200;
+        top: 12px;
+        left: 12px;
+        padding: 10px 16px;
+        color: var(--white);
+        background: var(--navy);
+        border-radius: 6px;
+        transform: translateY(-160%);
+        transition: transform 0.2s ease;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--navy-3);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 26px;
+        height: 2px;
+        background: var(--accent);
+        content: "";
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-height: 48px;
+        padding: 12px 24px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        font: inherit;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn svg {
+        width: 17px;
+        height: 17px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .btn--accent {
+        color: var(--white);
+        background: var(--navy-3);
+        box-shadow: 0 8px 22px rgba(74, 91, 152, 0.28);
+      }
+
+      .btn--accent:hover {
+        background: var(--navy-2);
+        box-shadow: 0 12px 28px rgba(30, 39, 85, 0.28);
+        transform: translateY(-2px);
+      }
+
+      .btn--ghost {
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.38);
+      }
+
+      .btn--ghost:hover {
+        background: rgba(255, 255, 255, 0.14);
+        border-color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .btn--outline {
+        color: var(--navy);
+        background: transparent;
+        border-color: #cdd3e5;
+      }
+
+      .btn--outline:hover {
+        background: var(--accent-soft);
+        border-color: var(--navy-3);
+        transform: translateY(-2px);
+      }
+
+      /* Navigation */
+      .site-header {
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 1px 8px rgba(30, 39, 85, 0.05);
+        backdrop-filter: blur(10px);
+      }
+
+      .site-nav {
+        position: relative;
+      }
+
+      .site-nav__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+      }
+
+      .site-nav__brand img {
+        width: auto;
+        height: 60px;
+      }
+
+      .site-nav__links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .site-nav__links a,
+      .site-nav__mobile a {
+        position: relative;
+        color: var(--navy);
+        font-size: 0.94rem;
+        font-weight: 600;
+        transition: color 0.2s ease;
+      }
+
+      .site-nav__links a::after {
+        position: absolute;
+        right: 0;
+        bottom: -7px;
+        left: 0;
+        height: 2px;
+        background: var(--navy-3);
+        content: "";
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.2s ease;
+      }
+
+      .site-nav__links a:hover {
+        color: var(--navy-3);
+      }
+
+      .site-nav__links a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .site-nav__links .site-nav__contact {
+        padding: 10px 20px;
+        color: var(--white);
+        background: var(--navy);
+        border-radius: 7px;
+      }
+
+      .site-nav__links .site-nav__contact::after {
+        display: none;
+      }
+
+      .site-nav__links .site-nav__contact:hover {
+        color: var(--white);
+        background: var(--navy-2);
+      }
+
+      .site-nav__toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        color: var(--navy);
+        background: transparent;
+        border: 0;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      .site-nav__toggle-lines {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .site-nav__toggle-lines span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 999px;
+        transform-origin: center;
+        transition: opacity 0.18s ease, transform 0.22s ease;
+      }
+
+      .site-nav__toggle[aria-expanded="true"] .site-nav__toggle-lines span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .site-nav__toggle[aria-expanded="true"] .site-nav__toggle-lines span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .site-nav__toggle[aria-expanded="true"] .site-nav__toggle-lines span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      .site-nav__mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        gap: 6px;
+        padding: 16px 24px 22px;
+        background: var(--white);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 16px 30px rgba(30, 39, 85, 0.13);
+      }
+
+      .site-nav__mobile.is-open {
+        display: flex;
+      }
+
+      .site-nav__mobile a {
+        padding: 10px 4px;
+      }
+
+      .site-nav__mobile .site-nav__contact {
+        margin-top: 6px;
+        padding: 11px 16px;
+        color: var(--white);
+        background: var(--navy);
+        border-radius: 7px;
+        text-align: center;
+      }
+
+      /* Hero */
+      .home-hero {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          radial-gradient(900px 480px at 82% 0%, rgba(128, 144, 200, 0.34) 0%, transparent 64%),
+          linear-gradient(150deg, rgba(30, 39, 85, 0.96) 0%, rgba(45, 61, 110, 0.84) 100%),
+          url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=82") center 42% / cover no-repeat;
+      }
+
+      .home-hero::before,
+      .home-hero::after {
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        content: "";
+        pointer-events: none;
+        transform: rotate(45deg);
+      }
+
+      .home-hero::before {
+        right: -190px;
+        bottom: -210px;
+        width: 520px;
+        height: 520px;
+      }
+
+      .home-hero::after {
+        right: 70px;
+        bottom: -210px;
+        width: 340px;
+        height: 340px;
+        border-color: rgba(128, 144, 200, 0.2);
+      }
+
+      .home-hero__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 850px;
+        padding-top: 96px;
+        padding-bottom: 82px;
+      }
+
+      .home-hero .eyebrow {
+        color: #dce1f3;
+      }
+
+      .home-hero .eyebrow::before {
+        background: var(--accent);
+      }
+
+      .home-hero h1 {
+        max-width: 820px;
+        margin: 22px 0 22px;
+        color: var(--white);
+        font-size: clamp(2.45rem, 5.7vw, 4.25rem);
+      }
+
+      .home-hero h1 .underline {
+        position: relative;
+        z-index: 0;
+        white-space: nowrap;
+      }
+
+      .home-hero h1 .underline::after {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0.04em;
+        left: 0;
+        height: 0.13em;
+        background: var(--accent);
+        border-radius: 3px;
+        content: "";
+        opacity: 0.92;
+      }
+
+      .home-hero__lede {
+        max-width: 720px;
+        margin-bottom: 36px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.12rem;
+        line-height: 1.75;
+      }
+
+      .home-hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .home-hero__trust {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        margin-top: 50px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .home-hero__trust div {
+        margin-right: 26px;
+        padding: 2px 26px 2px 0;
+        color: rgba(255, 255, 255, 0.7);
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 0.9rem;
+      }
+
+      .home-hero__trust div:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+      }
+
+      .home-hero__trust strong {
+        color: var(--white);
+      }
+
+      /* Shared sections */
+      .home-section {
+        padding: 96px 0;
+      }
+
+      .home-section--paper {
+        background: var(--paper);
+      }
+
+      #why {
+        background:
+          linear-gradient(90deg, rgba(244, 246, 251, 0.98) 0%, rgba(244, 246, 251, 0.94) 58%, rgba(244, 246, 251, 0.78) 100%),
+          url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80") center 46% / cover no-repeat;
+      }
+
+      .section-head {
+        max-width: 710px;
+        margin-bottom: 48px;
+      }
+
+      .section-head h2,
+      .consultancy__copy h2 {
+        margin: 16px 0 15px;
+        font-size: clamp(2rem, 3.8vw, 3rem);
+      }
+
+      .section-head p,
+      .lead-copy {
+        color: var(--muted);
+        font-size: 1.06rem;
+        line-height: 1.75;
+      }
+
+      .lead-copy {
+        max-width: 790px;
+        color: #404860;
+      }
+
+      /* Two ways */
+      .ways-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .way-card {
+        position: relative;
+        padding: 36px 34px;
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 4px 16px rgba(30, 39, 85, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.25s ease;
+      }
+
+      .way-card::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 4px;
+        content: "";
+      }
+
+      .way-card--consultancy::before {
+        background: var(--navy);
+      }
+
+      .way-card--training::before {
+        background: var(--accent);
+      }
+
+      .way-card:hover {
+        box-shadow: 0 18px 42px rgba(30, 39, 85, 0.11);
+        transform: translateY(-4px);
+      }
+
+      .way-card__tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--navy-3);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .way-card h3 {
+        margin-bottom: 14px;
+        font-size: 1.5rem;
+      }
+
+      .way-card p {
+        margin-bottom: 23px;
+        color: var(--muted);
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        padding: 6px 12px;
+        color: var(--navy);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .ways-note {
+        max-width: 680px;
+        margin: 32px auto 0;
+        color: var(--muted);
+        font-size: 1.02rem;
+        text-align: center;
+      }
+
+      /* Courses */
+      .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .course-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding: 30px 27px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 4px 16px rgba(30, 39, 85, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.25s ease;
+      }
+
+      .course-card:hover {
+        box-shadow: 0 16px 38px rgba(30, 39, 85, 0.1);
+        transform: translateY(-4px);
+      }
+
+      .course-card__number {
+        color: var(--navy-3);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .course-card h3 {
+        margin: 8px 0 18px;
+        font-size: 1.18rem;
+      }
+
+      .course-card li {
+        position: relative;
+        padding: 8px 0 8px 20px;
+        color: #485169;
+        border-top: 1px solid #eef0f6;
+        font-size: 0.93rem;
+        line-height: 1.5;
+      }
+
+      .course-card li:first-child {
+        border-top: 0;
+      }
+
+      .course-card li::before {
+        position: absolute;
+        top: 16px;
+        left: 1px;
+        width: 7px;
+        height: 7px;
+        background: var(--accent);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .course-card--tailored {
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.75);
+        background:
+          radial-gradient(300px 220px at 100% 0%, rgba(128, 144, 200, 0.3), transparent 68%),
+          var(--navy);
+        border-color: var(--navy);
+      }
+
+      .course-card--tailored h3 {
+        color: var(--white);
+        font-size: 1.45rem;
+      }
+
+      .course-card--tailored p {
+        margin-bottom: 24px;
+      }
+
+      .course-card--tailored .btn {
+        align-self: flex-start;
+      }
+
+      .courses-cta {
+        margin-top: 42px;
+        text-align: center;
+      }
+
+      /* Consultancy */
+      .consultancy-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 56px;
+        align-items: center;
+      }
+
+      .consultancy__services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .consultancy__services li {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 14px 18px;
+        color: var(--navy);
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        box-shadow: 0 5px 16px rgba(30, 39, 85, 0.06);
+        font-size: 0.94rem;
+        font-weight: 600;
+      }
+
+      .consultancy__services li::before {
+        width: 9px;
+        height: 9px;
+        flex: 0 0 auto;
+        background: var(--accent);
+        border-radius: 2px;
+        content: "";
+        transform: rotate(45deg);
+      }
+
+      /* CTA */
+      .closing-cta {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          linear-gradient(150deg, rgba(30, 39, 85, 0.94), rgba(45, 61, 110, 0.86)),
+          url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80") center 48% / cover no-repeat;
+        text-align: center;
+      }
+
+      .closing-cta::before,
+      .closing-cta::after {
+        position: absolute;
+        background: rgba(128, 144, 200, 0.16);
+        border-radius: 20px;
+        content: "";
+        transform: rotate(45deg);
+      }
+
+      .closing-cta::before {
+        top: -150px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+      }
+
+      .closing-cta::after {
+        bottom: -190px;
+        left: -110px;
+        width: 340px;
+        height: 340px;
+      }
+
+      .closing-cta__inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .closing-cta h2 {
+        margin-bottom: 16px;
+        color: var(--white);
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      .closing-cta p {
+        max-width: 610px;
+        margin: 0 auto 31px;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 1.07rem;
+      }
+
+      /* Footer */
+      .site-footer {
+        color: var(--white);
+        background: #0f0f1b;
+      }
+
+      .site-footer__grid {
+        display: grid;
+        grid-template-columns: 1.7fr repeat(3, 1fr);
+        gap: 42px;
+        padding-top: 64px;
+        padding-bottom: 42px;
+      }
+
+      .site-footer__logo {
+        width: auto;
+        height: 118px;
+        margin-bottom: 18px;
+      }
+
+      .site-footer__tagline {
+        max-width: 315px;
+        margin-bottom: 22px;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 0.9rem;
+      }
+
+      .site-footer__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.88rem;
+      }
+
+      .site-footer__contact a:hover,
+      .site-footer__links a:hover,
+      .site-footer__legal a:hover {
+        color: var(--white);
+      }
+
+      .site-footer__socials {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .site-footer__socials a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        color: rgba(255, 255, 255, 0.72);
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .site-footer__socials a:hover {
+        color: var(--white);
+        background: var(--navy-3);
+      }
+
+      .site-footer__socials svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .site-footer h3 {
+        margin: 8px 0 20px;
+        color: var(--white);
+        font-size: 0.76rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .site-footer__links {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+
+      .site-footer__links a {
+        color: rgba(255, 255, 255, 0.52);
+        font-size: 0.86rem;
+        transition: color 0.2s ease;
+      }
+
+      .site-footer__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        padding-top: 22px;
+        padding-bottom: 24px;
+        color: rgba(255, 255, 255, 0.34);
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        font-size: 0.8rem;
+      }
+
+      .site-footer__legal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 18px;
+      }
+
+      .site-footer__legal a {
+        transition: color 0.2s ease;
+      }
+
+      @media (max-width: 980px) {
+        .site-nav__links {
+          gap: 20px;
+        }
+
+        .courses-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .consultancy-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .site-footer__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 820px) {
+        .wrap {
+          padding-right: 24px;
+          padding-left: 24px;
+        }
+
+        .site-nav__links {
+          display: none;
+        }
+
+        .site-nav__toggle {
+          display: block;
+        }
+
+        .home-hero__inner {
+          padding-top: 76px;
+          padding-bottom: 72px;
+        }
+
+        .ways-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .home-section {
+          padding: 78px 0;
+        }
+      }
+
+      @media (max-width: 640px) {
+        html {
+          scroll-padding-top: 82px;
+        }
+
+        .site-nav__brand img {
+          height: 54px;
+        }
+
+        .home-hero h1 .underline {
+          white-space: normal;
+          text-decoration: none;
+        }
+
+        .home-hero h1 .underline::after {
+          display: none;
+        }
+
+        .home-hero__lede {
+          font-size: 1.02rem;
+        }
+
+        .home-hero__actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .home-hero__actions .btn {
+          width: 100%;
+        }
+
+        .home-hero__trust {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .home-hero__trust div,
+        .home-hero__trust div:last-child {
+          margin-right: 0;
+          padding: 0;
+          border-right: 0;
+        }
+
+        .courses-grid,
+        .site-footer__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .way-card,
+        .course-card {
+          padding: 28px 24px;
+        }
+
+        .site-footer__grid {
+          gap: 30px;
+        }
+
+        .site-footer__bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .site-footer__legal {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .btn,
+        .way-card,
+        .course-card {
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    {% include 'partials/navbar.html' %}
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <section id="home" class="hero">
-      <div class="hero__bg">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80" alt="Professional team collaborating" />
-        <div class="hero__overlay"></div>
-      </div>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <div class="wrap site-nav__inner">
+          <a class="site-nav__brand" href="/" aria-label="Bypress home">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Bypress" />
+          </a>
 
-      <div class="hero__deco">
-        <div class="hero__deco-diamond hero__deco-diamond--lg"></div>
-        <div class="hero__deco-diamond hero__deco-diamond--md"></div>
-        <div class="hero__deco-diamond hero__deco-diamond--sm"></div>
-      </div>
-
-      <div class="hero__content">
-        <div class="hero__inner">
-          <div class="hero__label">
-            <span class="hero__label-dot"></span>
-            Outsourced Office Administration Solutions
-          </div>
-
-          <h1 class="hero__title">
-            The Human Touch
-            <span class="hero__title-accent">Your Business</span>
-            Deserves
-          </h1>
-
-          <p class="hero__subtitle">Bypress provides bespoke operational, sales, finance, and business support solutions for growing businesses across Ireland. Led by Catriona Byrne and backed by 50+ years of experience, we combine people-first support with smart systems, AI, and modern workflows to reduce operational pressure, improve organisation, strengthen communication, and help businesses scale with confidence.
-
- 
-
-Less operational pressure. More time to grow.</p>
-
-          <div class="hero__buttons">
-            <a href="#services" class="btn btn--primary">
-              Learn More<svg viewBox="0 0 24 24" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="/contact" class="btn btn--outline-white">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 0 1.13 2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>Contact Us
-            </a>
-          </div>
-
-          <div class="hero__stats">
-            <div>
-              <div class="hero__stat-value">50+</div>
-              <div class="hero__stat-label">Years Combined Experience</div>
-            </div>
-            <div>
-              <div class="hero__stat-value">100%</div>
-              <div class="hero__stat-label">Human-First Approach</div>
-            </div>
-            <div>
-              <div class="hero__stat-value">3</div>
-              <div class="hero__stat-label">Core Service Areas</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__wave">
-        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M0 60H1440V20C1200 60 960 0 720 20C480 40 240 0 0 20V60Z" fill="white"></path>
-        </svg>
-      </div>
-    </section>
-
-    <section id="services" class="services">
-  <div class="section__inner">
-    <div class="section__header">
-      <div class="section__tag">
-        <span class="section__tag-dot"></span>
-        What We Offer
-      </div>
-
-      <h2 class="section__title">Our Services</h2>
-
-      <p class="section__subtitle">
-        Practical outsourced support built around your business, helping you stay organised,
-        save time, improve cashflow, generate leads, and keep operations moving.
-      </p>
-    </div>
-
-    <div class="services__grid">
-      <a href="/services/financial-operations-support" class="service-card">
-        <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80" alt="Financial Operations Support" loading="lazy" />
-          <div class="service-card__image-overlay"></div>
-          <div class="service-card__image-badge">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                <line x1="1" y1="10" x2="23" y2="10"></line>
-                <path d="M7 15h.01"></path>
-                <path d="M12 15h.01"></path>
-                <path d="M17 15h.01"></path>
-              </svg>
-            </div>
-            <div class="service-card__image-title">
-              <div class="service-card__image-sub">Finance</div>
-              <div class="service-card__image-name">Financial Operations Support</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card__body">
-          <p class="service-card__desc">
-            Invoicing, credit control, debtor management, accounts admin and payment follow-up
-            to help improve cashflow and financial organisation.
-          </p>
-
-          <ul class="service-card__tags">
-            <li class="service-card__tag">Invoicing</li>
-            <li class="service-card__tag">Debtor management</li>
-            <li class="service-card__tag">Cashflow visibility</li>
+          <ul class="site-nav__links">
+            <li><a href="#training">Training</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#consultancy">Consultancy</a></li>
+            <li><a href="#why">Why Bypress</a></li>
+            <li><a class="site-nav__contact" href="/contact">Contact</a></li>
           </ul>
 
-          <span class="service-card__link">
-            Learn More
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
+          <button
+            class="site-nav__toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="home-mobile-menu"
+          >
+            <span class="site-nav__toggle-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
         </div>
-      </a>
 
-      <a href="/services/lead-generation" class="service-card">
-        <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Lead Generation and Sales" loading="lazy" />
-          <div class="service-card__image-overlay"></div>
-          <div class="service-card__image-badge">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                <polyline points="17 6 23 6 23 12"></polyline>
-              </svg>
+        <div class="site-nav__mobile" id="home-mobile-menu">
+          <a href="#training">Training</a>
+          <a href="#courses">Courses</a>
+          <a href="#consultancy">Consultancy</a>
+          <a href="#why">Why Bypress</a>
+          <a class="site-nav__contact" href="/contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="home-hero" id="top">
+        <div class="wrap">
+          <div class="home-hero__inner">
+            <span class="eyebrow">Training &amp; Consultancy</span>
+            <h1>
+              We <span class="underline">do the job</span>. Then we
+              <span class="underline">train your team</span> to do it too.
+            </h1>
+            <p class="home-hero__lede">
+              Bypress is a team of working sales, communications and operations practitioners. We run live pipelines, write the emails that get replies, and build the systems that keep businesses moving. Now we bring that same hands on experience to training, so your people can do the work to the same standard.
+            </p>
+            <div class="home-hero__actions">
+              <a class="btn btn--accent" href="/contact">
+                Book a call
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="/contact">See our courses</a>
             </div>
-            <div class="service-card__image-title">
-              <div class="service-card__image-sub">&amp; Sales</div>
-              <div class="service-card__image-name">Lead Generation</div>
+            <div class="home-hero__trust" aria-label="Bypress credentials">
+              <div>Led by <strong>Catriona Byrne</strong></div>
+              <div><strong>50+ years</strong> combined experience</div>
+              <div>Practitioners, <strong>not just trainers</strong></div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="service-card__body">
-          <p class="service-card__desc">
-            Prospect outreach, relationship nurturing and pipeline support to turn genuine
-            conversations into real business opportunities.
+      <section class="home-section home-section--paper" id="why">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <span class="eyebrow">Why Bypress</span>
+            <h2>Trained by the people who actually do it</h2>
+          </div>
+          <p class="lead-copy">
+            Most training is delivered by people who once did the job, or who have only ever taught it. At Bypress, the person standing in front of your team is the same person who could do the work for you. We are practitioners first. Every course we run is built on what works in the field, not theory from a textbook. When you learn from us, you learn the exact methods we use every day for our own clients.
           </p>
-
-          <ul class="service-card__tags">
-            <li class="service-card__tag">Prospect outreach</li>
-            <li class="service-card__tag">Relationship nurturing</li>
-            <li class="service-card__tag">Pipeline management</li>
-          </ul>
-
-          <span class="service-card__link">
-            Learn More
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
         </div>
-      </a>
+      </section>
 
-      <a href="/services/office-administration" class="service-card">
-        <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Office Administration" loading="lazy" />
-          <div class="service-card__image-overlay"></div>
-          <div class="service-card__image-badge">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
-            </div>
-            <div class="service-card__image-title">
-              <div class="service-card__image-sub">Management</div>
-              <div class="service-card__image-name">Office Administration</div>
-            </div>
+      <section class="home-section" id="training">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <span class="eyebrow">How we work</span>
+            <h2>Two ways to work with us</h2>
+            <p>Have it handled for you, or have your team trained to do it. Many clients do both.</p>
           </div>
-        </div>
 
-        <div class="service-card__body">
-          <p class="service-card__desc">
-            Scheduling, correspondence, data management and process coordination to keep
-            day-to-day operations running smoothly.
+          <div class="ways-grid">
+            <article class="way-card way-card--consultancy">
+              <span class="way-card__tag">Done for you</span>
+              <h3>Consultancy</h3>
+              <p>
+                We take the work off your desk. Sales support, lead generation, communications and the systems behind them, delivered by a senior team on a flexible, fractional basis. You get the results without adding headcount.
+              </p>
+              <div class="chips" aria-label="Consultancy services">
+                <span class="chip">Sales support</span>
+                <span class="chip">Lead generation</span>
+                <span class="chip">Communications</span>
+                <span class="chip">Systems &amp; admin</span>
+              </div>
+            </article>
+
+            <article class="way-card way-card--training">
+              <span class="way-card__tag">Done with you</span>
+              <h3>Training</h3>
+              <p>
+                We train your team to do the work to a professional standard, using our own methods. Sessions are live, practical and built around your business, not a generic syllabus. Your team leaves able to do the job, not just talk about it.
+              </p>
+              <div class="chips" aria-label="Training formats">
+                <span class="chip">Live sessions</span>
+                <span class="chip">In house or online</span>
+                <span class="chip">Tailored</span>
+                <span class="chip">Practical</span>
+              </div>
+            </article>
+          </div>
+
+          <p class="ways-note">
+            Many clients start with one and move to the other. We are happy to do the work while your team learns to take it on.
           </p>
+        </div>
+      </section>
 
-          <ul class="service-card__tags">
-            <li class="service-card__tag">Scheduling &amp; diary</li>
-            <li class="service-card__tag">Document management</li>
-            <li class="service-card__tag">Process coordination</li>
-          </ul>
+      <section class="home-section home-section--paper" id="courses">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <span class="eyebrow">Courses</span>
+            <h2>What we train</h2>
+            <p>
+              Practical courses drawn from work we actually deliver, across five areas. Run as a half day or full day, in house or online, always tailored to your business.
+            </p>
+          </div>
 
-          <span class="service-card__link">
-            Learn More
+          <div class="courses-grid">
+            <article class="course-card">
+              <span class="course-card__number">01</span>
+              <h3>Sales &amp; Business Development</h3>
+              <ul>
+                <li>Building a Sales Pipeline from Scratch</li>
+                <li>Following Up Without Being a Pest</li>
+                <li>Converting Inbound Leads</li>
+                <li>LinkedIn for Lead Generation</li>
+                <li>Selling for Non Salespeople</li>
+                <li>Running a Weekly Sales Huddle</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <span class="course-card__number">02</span>
+              <h3>Communications &amp; Business Writing</h3>
+              <ul>
+                <li>Business Writing That Gets a Reply</li>
+                <li>Writing Proposals That Win</li>
+                <li>Professional Document Production</li>
+                <li>Email and Inbox Systems</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <span class="course-card__number">03</span>
+              <h3>Marketing &amp; Lead Generation</h3>
+              <ul>
+                <li>Webinars as a Lead Engine</li>
+                <li>A Simple Monthly Marketing Rhythm</li>
+                <li>Email Campaigns for Small Teams</li>
+                <li>LinkedIn Content for Business Owners</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <span class="course-card__number">04</span>
+              <h3>Systems &amp; Operations</h3>
+              <ul>
+                <li>Building Your Sales Tracker</li>
+                <li>CRM Setup and Discipline</li>
+                <li>Systemising Your Admin</li>
+                <li>From Scattered Notes to Working Workbook</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <span class="course-card__number">05</span>
+              <h3>Networking &amp; Referral</h3>
+              <ul>
+                <li>Networking That Actually Wins Work</li>
+                <li>Building a Referral Network</li>
+                <li>Your 60 Second Pitch</li>
+              </ul>
+            </article>
+
+            <aside class="course-card course-card--tailored">
+              <h3>Every course, tailored.</h3>
+              <p>
+                We shape each session around your business, your systems and your stage of growth. Tell us the gap and we will build it.
+              </p>
+              <a class="btn btn--accent" href="/contact">Talk to us</a>
+            </aside>
+          </div>
+
+          <div class="courses-cta">
+            <a class="btn btn--outline" href="/contact">See all courses</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" id="consultancy">
+        <div class="wrap reveal">
+          <div class="consultancy-grid">
+            <div class="consultancy__copy">
+              <span class="eyebrow">Consultancy</span>
+              <h2>The work we still do</h2>
+              <p class="lead-copy">
+                The training only carries weight because we are still in the field. When you would rather it was handled for you, we do it. Senior, fractional and flexible, and ready to hand over to your team through training whenever you are ready.
+              </p>
+            </div>
+
+            <ul class="consultancy__services" aria-label="Consultancy services">
+              <li>Fractional sales support</li>
+              <li>Lead generation</li>
+              <li>Communications &amp; copywriting</li>
+              <li>Professional document production</li>
+              <li>Sales &amp; admin systems</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section closing-cta">
+        <div class="wrap closing-cta__inner reveal">
+          <h2>Let us talk about your team</h2>
+          <p>
+            Whether you want the work done for you or your people trained to do it, we can help. Tell us where you are and we will point you in the right direction.
+          </p>
+          <a class="btn btn--accent" href="/contact">
+            Book a call
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
-        </div>
-      </a>
-
-    </div>
-
-    <div class="services-fit">
-      <div class="services-fit__content">
-        <div class="section__tag services-fit__tag">
-          <span class="section__tag-dot"></span>
-          Not One-Size-Fits-All
-        </div>
-
-        <h3 class="services-fit__title">
-          Support built around how your business actually works.
-        </h3>
-
-        <p class="services-fit__text">
-          We do not force clients into rigid packages. Bypress becomes part of your team,
-          offering personal, scalable support that adapts to your goals, pressures and workflow.
-        </p>
-      </div>
-
-      <div class="services-fit__points">
-        <div class="services-fit__point">
-          <span>Bespoke support</span>
-        </div>
-        <div class="services-fit__point">
-          <span>Personal attention</span>
-        </div>
-        <div class="services-fit__point">
-          <span>Scales with you</span>
-        </div>
-        <div class="services-fit__point">
-          <span>Results-focused</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section id="testimonials" class="why">
-      <div class="section__inner">
-        <div class="why__grid">
-          <div class="why__image-wrap">
-            <div class="why__image">
-              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80" alt="Business partnership" loading="lazy" />
-              <div class="why__image-overlay"></div>
-            </div>
-            <div class="why__badge">
-              <div class="why__badge-value">50+</div>
-              <div class="why__badge-label">Years of combined team experience</div>
-            </div>
-            <div class="why__deco"></div>
-          </div>
-
-          <div class="why__content">
-            <div class="section__tag">
-              <span class="section__tag-dot"></span>
-              What Makes Bypress Different
-            </div>
-            <h2 class="section__title" style="text-align: left; margin-bottom: 20px;">Bringing the Human Touch Back to Business</h2>
-            <p class="why__desc">At Bypress, we know that while AI and automation can make things more efficient, the real magic happens through genuine relationships and personal connections. We blend our deep expertise with heartfelt engagement to deliver results that matter.</p>
-
-            <div class="why__pillars">
-              <div class="why__pillar">
-                <div class="why__pillar-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 21s-7-4.2-9-9.5C1.6 7.8 3.9 4 7.6 4c1.9 0 3.4 1 4.4 2.4C13 5 14.5 4 16.4 4c3.7 0 6 3.8 4.6 7.5C19 16.8 12 21 12 21z"></path>
-                    <path d="M8.2 12.2h2.3l1.1-2.3 1.9 4.3 1-2h2.4"></path>
-                  </svg>
-                </div>
-                <div class="why__pillar-copy">
-                  <div class="why__pillar-title">Human-First Support</div>
-                  <p class="why__pillar-text why__pillar-lead">Real people. Real relationships. Real accountability.</p>
-                  <p class="why__pillar-text">We work closely with our clients, communicate proactively, and become part of the day-to-day running of their business &mdash; not just an outsourced provider sitting in the background.</p>
-                </div>
-              </div>
-
-              <div class="why__pillar">
-                <div class="why__pillar-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 2v3"></path>
-                    <path d="M12 19v3"></path>
-                    <path d="M4.93 4.93l2.12 2.12"></path>
-                    <path d="M16.95 16.95l2.12 2.12"></path>
-                    <path d="M2 12h3"></path>
-                    <path d="M19 12h3"></path>
-                    <path d="M4.93 19.07l2.12-2.12"></path>
-                    <path d="M16.95 7.05l2.12-2.12"></path>
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <path d="M10.7 10.8h2.6v2.4h-2.6z"></path>
-                  </svg>
-                </div>
-                <div class="why__pillar-copy">
-                  <div class="why__pillar-title">Smart Use of AI &amp; Automation</div>
-                  <p class="why__pillar-text">We embrace technology, automation, and AI to improve efficiency, streamline workflows, support communication, and create better operational systems for our clients.</p>
-                  <p class="why__pillar-text">But technology is only valuable when combined with human oversight, experience, and genuine business understanding &mdash; and that's where Bypress makes the difference.</p>
-                </div>
-              </div>
-
-              <div class="why__pillar">
-                <div class="why__pillar-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 3h12v5a6 6 0 0 1-12 0V3z"></path>
-                    <path d="M8 21h8"></path>
-                    <path d="M12 15v6"></path>
-                    <path d="M6 6H4a2 2 0 0 0 0 4h2"></path>
-                    <path d="M18 6h2a2 2 0 0 1 0 4h-2"></path>
-                    <path d="M10 7.5h4"></path>
-                  </svg>
-                </div>
-                <div class="why__pillar-copy">
-                  <div class="why__pillar-title">50+ Years of Combined Experience</div>
-                  <p class="why__pillar-text">A team with extensive experience across operations, administration, finance support, credit control, sales support, workflow management, and business operations.</p>
-                  <p class="why__pillar-text">We bring practical knowledge, commercial awareness, and operational structure to every business we support.</p>
-                </div>
-              </div>
-
-              <div class="why__pillar">
-                <div class="why__pillar-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9z"></path>
-                    <path d="M12 12 4.4 7.8"></path>
-                    <path d="M12 12l7.6-4.2"></path>
-                    <path d="M12 12v8.7"></path>
-                    <path d="M15.5 5.1 8 9.3"></path>
-                  </svg>
-                </div>
-                <div class="why__pillar-copy">
-                  <div class="why__pillar-title">Tailored Around Your Business</div>
-                  <p class="why__pillar-text why__pillar-lead">No two businesses operate the same way &mdash; so neither should the support behind them.</p>
-                  <p class="why__pillar-text">We build bespoke operational support solutions around your workflows, systems, industry, and stage of growth rather than forcing clients into rigid service packages.</p>
-                </div>
-              </div>
-
-              <div class="why__pillar">
-                <div class="why__pillar-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 3 4 6.5v5.8c0 4.9 3.4 7.7 8 8.7 4.6-1 8-3.8 8-8.7V6.5L12 3z"></path>
-                    <path d="m8.5 12.2 2.2 2.2 4.8-5"></path>
-                    <path d="M7 18.5 4.8 21"></path>
-                    <path d="M17 18.5l2.2 2.5"></path>
-                  </svg>
-                </div>
-                <div class="why__pillar-copy">
-                  <div class="why__pillar-title">Trusted Operational Partnership</div>
-                  <p class="why__pillar-text why__pillar-lead">We don't just complete tasks &mdash; we help businesses stay organised, responsive, efficient, and growth-focused.</p>
-                  <p class="why__pillar-text">From customer communication and workflow management to financial operations and sales support, we help remove operational pressure so business owners can focus on leading and growing their business with confidence.</p>
-                </div>
-              </div>
-
-              <div class="why__pillar">
-                <div class="why__pillar-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 21s-8-4.8-8-11.2A5.7 5.7 0 0 1 9.7 4c1.3 0 2.2.5 2.3.6.1-.1 1-.6 2.3-.6A5.7 5.7 0 0 1 20 9.8C20 16.2 12 21 12 21z"></path>
-                    <path d="M8.5 11.5c1.2 1.7 2.4 2.6 3.5 2.6s2.3-.9 3.5-2.6"></path>
-                    <path d="M9.4 8.6h.01"></path>
-                    <path d="M14.6 8.6h.01"></path>
-                  </svg>
-                </div>
-                <div class="why__pillar-copy">
-                  <div class="why__pillar-title">Your Business, Our Care</div>
-                  <p class="why__pillar-text">We genuinely care about the businesses we support and take pride in helping our clients operate more efficiently, improve organisation, reduce stress, and create stronger foundations for growth.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-banner">
-      <div class="cta-banner__deco cta-banner__deco--tr"></div>
-      <div class="cta-banner__deco cta-banner__deco--bl"></div>
-      <div class="cta-banner__deco cta-banner__deco--mid"></div>
-
-      <div class="cta-banner__inner">
-        <h2 class="cta-banner__title">
-          Ready to Grow Your Business
-          <span class="cta-banner__title-accent">With Us?</span>
-        </h2>
-        <p class="cta-banner__sub">Let's talk about how Bypress can take the admin burden off your plate so you can focus on what matters most.</p>
-        <div class="cta-banner__buttons">
-          <a href="#services" class="btn btn--primary">
-            Explore Services<svg viewBox="0 0 24 24" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="/contact" class="btn btn--outline-white">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 0 1.13 2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>Contact Us Today
-          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__grid">
+        <div>
+          <img
+            class="site-footer__logo"
+            src="{{ url_for('static', filename='img/transparent.png') }}"
+            alt="Bypress"
+          />
+          <p class="site-footer__tagline">
+            Practitioners who train. We do the job, and we train your team to do it too.
+          </p>
+          <div class="site-footer__contact">
+            <a href="mailto:info@bypress.ie">info@bypress.ie</a>
+            <a href="tel:+353876273239">087 6273239</a>
+            <span>Ireland</span>
+          </div>
+          <div class="site-footer__socials">
+            <a href="https://m.facebook.com/100089848575166/" aria-label="Bypress on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/bypress_solutions" aria-label="Bypress on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Training</h3>
+          <ul class="site-footer__links">
+            <li><a href="#courses">Sales &amp; Development</a></li>
+            <li><a href="#courses">Communications</a></li>
+            <li><a href="#courses">Marketing</a></li>
+            <li><a href="#courses">Systems &amp; Operations</a></li>
+            <li><a href="#courses">Networking &amp; Referral</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Consultancy</h3>
+          <ul class="site-footer__links">
+            <li><a href="#consultancy">Sales support</a></li>
+            <li><a href="#consultancy">Lead generation</a></li>
+            <li><a href="#consultancy">Communications</a></li>
+            <li><a href="#consultancy">Document production</a></li>
+            <li><a href="#consultancy">Systems</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <ul class="site-footer__links">
+            <li><a href="/about">About us</a></li>
+            <li><a href="/about#team">Our team</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    {% include 'partials/footer.html' %}
 
-    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+      <div class="wrap site-footer__bottom">
+        <span>&copy; 2026 Bypress. All rights reserved.</span>
+        <div class="site-footer__legal" aria-label="Legal links">
+          <a href="{{ url_for('static', filename='legal/privacy-policy.pdf') }}">Privacy Policy</a>
+          <a href="{{ url_for('static', filename='legal/terms-of-service.pdf') }}">Terms of Service</a>
+          <a href="{{ url_for('static', filename='legal/cookie-policy.pdf') }}">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var body = document.body;
+        var toggle = document.querySelector(".site-nav__toggle");
+        var mobileMenu = document.querySelector(".site-nav__mobile");
+
+        function closeMenu() {
+          if (!toggle || !mobileMenu) return;
+          toggle.setAttribute("aria-expanded", "false");
+          mobileMenu.classList.remove("is-open");
+          body.classList.remove("menu-open");
+        }
+
+        if (toggle && mobileMenu) {
+          toggle.addEventListener("click", function () {
+            var isOpen = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!isOpen));
+            mobileMenu.classList.toggle("is-open", !isOpen);
+            body.classList.toggle("menu-open", !isOpen);
+          });
+
+          mobileMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+          });
+
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 820) closeMenu();
+          });
+        }
+
+      })();
+    </script>
   </body>
 </html>
